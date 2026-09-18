@@ -1,6 +1,8 @@
 # Copy to .dev.vars for local runs, and set the same values as secrets in
 # production:  wrangler secret put DESK_RECIPIENTS
 #
-# Comma-separated. Every enquiry goes to all of them.
-DESK_RECIPIENTS="one@example.com,two@example.com"
+# Two lists, on purpose. The Thailand-side book is shared; the US-outbound book
+# is not, and it has no fallback to the shared list.
+DESK_RECIPIENTS="shared@example.com,partner@example.com"
+US_RECIPIENTS="you@example.com"
 RESEND_KEY="re_xxxxxxxxxxxxxxxxxxxx"

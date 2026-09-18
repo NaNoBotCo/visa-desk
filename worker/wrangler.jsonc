@@ -5,9 +5,12 @@
   "vars": {
     "SITE_ORIGIN": "https://chiangmaivisadesk.com",
     "ORIGIN_CODE": "CMVD",
+    "ORIGIN_CODE_US": "USOUT",
     "MAIL_FROM": "desk@chiangmaivisadesk.com"
-    // DESK_RECIPIENTS is a secret, not a var — the desk's addresses stay out of
-    // this repository.  wrangler secret put DESK_RECIPIENTS
+    // DESK_RECIPIENTS and US_RECIPIENTS are secrets, not vars — the addresses
+    // stay out of this repository, and the two lists are separate on purpose.
+    //   wrangler secret put DESK_RECIPIENTS
+    //   wrangler secret put US_RECIPIENTS
   },
   "d1_databases": [
     { "binding": "DB", "database_name": "visa-desk", "database_id": "PUT-THE-D1-ID-HERE" }

@@ -13,6 +13,13 @@
  *
  *     wrangler secret put DESK_RECIPIENTS
  *
+ * TWO BOOKS OF BUSINESS SHARE THIS WORKER.
+ *   line=th  Thailand-side work, shared with the partner agency. Goes to
+ *            DESK_RECIPIENTS and is stamped ORIGIN_CODE.
+ *   line=us  Thai nationals applying for US visas. A separate book. Goes to
+ *            US_RECIPIENTS and is stamped ORIGIN_CODE_US. It does not reach
+ *            the Thailand-side recipient list.
+ *
  * ATTRIBUTION HAS TWO LAYERS.
  *   origin  — set here from ORIGIN_CODE, never from the request body. Every
  *             enquiry that comes through this site carries it, so the desk's
@@ -31,7 +38,8 @@ const CORS = (origin) => ({
 // Fields the page is allowed to set. "origin" is deliberately not among them:
 // it is stamped here, from the Worker's own config, so an enquiry that came
 // through this site carries the desk's attribution whatever the URL said.
-const FIELDS = ["name", "contact", "visa", "need", "date", "where", "notes", "ref", "page", "landing"];
+const FIELDS = ["name", "contact", "visa", "need", "date", "where", "who", "notes", "ref", "page", "landing"];
+const LINES = ["th", "us"];
 
 export default {
   async fetch(request, env) {
@@ -53,25 +61,28 @@ export default {
     const row = {};
     for (const f of FIELDS) row[f] = str(body[f]);
     row.ref = row.ref.slice(0, 40);                       // partner code, may be empty
-    row.origin = (env.ORIGIN_CODE || "DESK").slice(0, 40); // ours, always, not the page's
+    row.line = LINES.includes(str(body.line)) ? str(body.line) : "th";
+    row.origin = (row.line === "us"
+      ? env.ORIGIN_CODE_US || "USOUT"
+      : env.ORIGIN_CODE || "DESK").slice(0, 40);           // ours, always, not the page's
 
     const seen = await env.DB.prepare("SELECT id FROM enquiries WHERE idem = ?").bind(key).first();
     if (seen) return json({ ok: true, id: seen.id, duplicate: true }, 200, origin);
 
     const res = await env.DB.prepare(
-      `INSERT INTO enquiries (idem, name, contact, visa, need, travel_date, area, notes,
-                              origin, ref, page, landing, referer, received_at, ip_country)
-       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
+      `INSERT INTO enquiries (idem, name, contact, visa, need, travel_date, area, us_side, notes,
+                              line, origin, ref, page, landing, referer, received_at, ip_country)
+       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
     ).bind(
-      key, row.name, row.contact, row.visa, row.need, row.date, row.where, row.notes,
-      row.origin, row.ref, row.page, row.landing,
+      key, row.name, row.contact, row.visa, row.need, row.date, row.where, row.who, row.notes,
+      row.line, row.origin, row.ref, row.page, row.landing,
       str(request.headers.get("referer")).slice(0, 500),
       new Date().toISOString(), request.headers.get("cf-ipcountry") || ""
     ).run();
 
     const id = res.meta.last_row_id;
 
-    const to = recipients(env);
+    const to = recipients(env, row.line);
     if (env.RESEND_KEY && to.length) {
       try {
         await fetch("https://api.resend.com/emails", {
@@ -81,8 +92,9 @@ export default {
             from: env.MAIL_FROM || "desk@chiangmaivisadesk.com",
             to,
             reply_to: contact.includes("@") ? contact : undefined,
-            subject: `#${id} ${row.need || "enquiry"} — ${row.name} [${row.origin}${row.ref ? "/" + row.ref : ""}]`,
+            subject: `#${id} ${row.line === "us" ? "US visa" : row.need || "enquiry"} — ${row.name} [${row.origin}${row.ref ? "/" + row.ref : ""}]`,
             text:
+              `line:   ${row.line === "us" ? "US visas — this book only" : "Thailand side — the whole desk"}\n` +
               `origin: ${row.origin}   (commission: the desk)\n` +
               `ref:    ${row.ref || "—"}${row.ref ? "   (partner share out of the desk's)" : ""}\n\n` +
               FIELDS.map((f) => `${f}: ${row[f]}`).join("\n") +
@@ -96,8 +108,11 @@ export default {
   }
 };
 
-function recipients(env) {
-  return String(env.DESK_RECIPIENTS || env.DESK_INBOX || "")
+function recipients(env, line) {
+  const list = line === "us"
+    ? env.US_RECIPIENTS                                   // no fallback: the US
+    : env.DESK_RECIPIENTS || env.DESK_INBOX;              // book is not shared
+  return String(list || "")
     .split(",")
     .map((s) => s.trim())
     .filter((s) => s.includes("@"));

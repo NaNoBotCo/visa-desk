@@ -26,7 +26,13 @@
   var fromUrl = clean(new URLSearchParams(location.search).get(R.param || "ref"));
   if (fromUrl) store(fromUrl);
   var REF = fromUrl || readStored() || "";        // partner code, may be empty
-  var ORIGIN = C.originCode || "";                 // the desk's own stamp
+
+  // Which book of business this page's form belongs to. A form marked
+  // data-line="us" is the US-outbound book and is stamped, routed and counted
+  // separately from the shared Thailand-side desk.
+  var formEl = document.getElementById("quoteform");
+  var LINE = (formEl && formEl.getAttribute("data-line")) || "th";
+  var ORIGIN = (LINE === "us" ? C.originCodeUs : C.originCode) || "";
 
   var chip = $("#refchip"), code = $("#refcode");
   if (chip && code && REF) {
@@ -35,6 +41,7 @@
   }
   var hidRef = $("#f-ref"); if (hidRef) hidRef.value = REF;
   var hidOrigin = $("#f-origin"); if (hidOrigin) hidOrigin.value = ORIGIN;
+  var hidLine = $("#f-line"); if (hidLine) hidLine.value = LINE;
   var hidPage = $("#f-page"); if (hidPage) hidPage.value = location.pathname;
   var hidLanding = $("#f-landing"); if (hidLanding) hidLanding.value = location.href.slice(0, 500);
 
@@ -103,6 +110,7 @@
 
       data.ref = REF;
       data.origin = ORIGIN;
+      data.line = LINE;
       data.landing = location.href.slice(0, 500);
       data.idempotencyKey = idem;
       data.submittedAt = new Date().toISOString();
@@ -151,6 +159,7 @@
         "",
         (d.notes || ""),
         "",
+        "line: " + (d.line || "th"),
         "origin: " + (d.origin || ""),
         "ref: " + (d.ref || "—")
       ].join("\n");

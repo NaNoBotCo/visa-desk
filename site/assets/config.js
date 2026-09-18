@@ -18,11 +18,18 @@ window.DESK = {
   whatsapp: "",
   telegram: "",
 
-  // ORIGIN — stamped on every enquiry that comes through this site, whether or
-  // not a partner referred it. This is what the desk's own commission is
-  // calculated from. The Worker sets it again server-side and ignores whatever
-  // the page sends, so a visitor cannot strip it out of the URL.
-  originCode: "CMVD",
+  // TWO BOOKS OF BUSINESS, ONE WEBSITE.
+  //
+  //   "th"  Thailand-side work — border runs, extensions, reporting. Shared
+  //         with the partner agency; enquiries go to the whole desk.
+  //   "us"  Thai nationals applying for US visas. A separate book. Enquiries
+  //         go to its own recipients and are counted on their own line.
+  //
+  // Each book has its own origin code, stamped on every enquiry that comes
+  // through this site. The Worker sets it again server-side and ignores
+  // whatever the page sends, so a visitor cannot strip it out of the URL.
+  originCode: "CMVD",       // th — the shared desk
+  originCodeUs: "USOUT",    // us — the US-outbound book
 
   // PARTNER CODE — optional, and it sits beside the origin rather than
   // replacing it. Empty when nobody referred the visitor.

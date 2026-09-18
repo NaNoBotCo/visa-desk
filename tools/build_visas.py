@@ -27,6 +27,7 @@ def cfg(key):
 NAME = cfg("name")
 DOMAIN = cfg("domain")
 ORIGIN = cfg("origin")
+INBOX = cfg("inbox")
 
 WORDS = {
     "en": {
@@ -48,10 +49,52 @@ WORDS = {
         "cats": "Categories",
         "tagnote": "Two tags, and they are ours rather than anyone's ruling: <strong>Most asked for</strong> is what people walk in with. <strong>Biggest file</strong> is where the paperwork is longest and the outcome lasts longest.",
         "nav": [("../", "Thailand services"), ("./", "US visas"), ("../farang-buddy/", "Free app"), ("../partners/", "Partners")],
-        "quote_h": "Tell us which one",
+        "quote_h": "Start a case",
         "quote_p": "Or describe the situation and we name the category for you.",
         "other": ("ภาษาไทย", "../th/us-visas/"),
-        "foot": "A Thai-registered company. Chiang Mai, Thailand.",
+        "foot": "US visa document preparation. Chiang Mai, Thailand.",
+        "run_h": "How a case runs",
+        "run_p": "Seven steps. The long one is the fourth.",
+        "run": [
+            ("Intake", "What you want, who is on your side in the United States, what has already been tried. An hour, in Thai or English."),
+            ("The category", "We name the one that fits, and say plainly where a second one would be the better bet."),
+            ("The evidence plan", "A list, in order, of every document and who issues it. Most of a refused case is a document nobody asked for in time."),
+            ("The written work", "The parts that are written rather than collected. This is where a file is won."),
+            ("Attorney review", "A US immigration attorney reviews and files. We hand over a file built to be read, not a box."),
+            ("Interview preparation", "The questions, in the order they come, in the language you will answer in."),
+            ("After", "The approval, the refusal, or the request for more evidence — each has a next move, and we say which."),
+        ],
+        "write_h": "The written work",
+        "write_p": "Collecting documents is the visible half. These are the parts somebody has to write, and the ones an adjudicator reads closely.",
+        "write": [
+            ("Business plan", "Written to the standard a case is actually judged against — market, structure, capital, and a hiring schedule that survives contact with the numbers."),
+            ("Source-of-funds narrative", "Where every baht came from, traced to an origin a stranger can verify, with the paper behind each hop."),
+            ("Job-creation and economic analysis", "What the investment does in the local economy, in the form the adjudicator expects to see it."),
+            ("Personal statement and timeline", "The story of the relationship, the career or the work, told once, consistently, with the evidence keyed to it."),
+            ("Certified translation", "Thai civil documents into English, certified, and matched to the names as they appear on the passport."),
+            ("Response to a request for evidence", "What was actually asked for, answered in the order it was asked."),
+        ],
+        "sep": "This is a separate book of business from the Thailand-side services on this site. Enquiries from this page go to the US desk, and nowhere else.",
+        "faq_h": "Questions",
+        "faq": [
+            ("Are you attorneys?", "No, and we say so on every page. The desk assembles the file and writes the written pieces. A US immigration attorney gives the legal advice and does the filing. If someone tells you a non-attorney can do that part, walk away from them."),
+            ("I was refused before. Is that the end of it?", "No. It is a starting condition. What matters is what has changed since, written down and evidenced, before you pay the fee again. That is its own piece of work and we quote it separately."),
+            ("Do you guarantee an outcome?", "Nobody can, and anyone who does is selling you something. The consulate decides. What we control is whether the file makes the case it should."),
+            ("How long does it take?", "It depends on the category and on what the consulate is doing that season. We do not publish timelines here because a published timeline is out of date by the time it is read; the quote gives you the current picture for your case."),
+            ("Can you work from Chiang Mai if I am somewhere else?", "Yes. Most of a case is documents and calls. The interview is the part that needs you in person, and preparation for it happens beforehand."),
+            ("What does it cost?", "Quoted per case, in writing, before anything starts. The written work is priced separately from the assembly because they are different amounts of work."),
+        ],
+        "f_name": "Name", "f_contact": "Email, LINE or WhatsApp",
+        "f_cat": "Which category", "f_cat_unsure": "Not sure — tell me",
+        "f_before": "Have you applied before?",
+        "f_before_opts": ["No, this is the first time", "Yes, and it was approved", "Yes, and it was refused", "Yes, and it is still pending"],
+        "f_who": "Who is on the US side", "f_who_ph": "An employer, a spouse, a school, a business of your own, nobody yet",
+        "f_where": "Where you are", "f_where_ph": "Chiang Mai, Bangkok, Isaan, abroad…",
+        "f_notes": "The situation, in your own words",
+        "f_notes_ph": "Dates that matter, a refusal, a deadline, a business you already run.",
+        "f_send": "Send it", "f_status": "This goes to the US desk.",
+        "f_noscript_a": "Your browser is not running scripts. Email the same details to ",
+        "f_noscript_b": " and a price comes back.",
     },
     "th": {
         "lang": "th", "dir": "ltr",
@@ -72,10 +115,52 @@ WORDS = {
         "cats": "ประเภทวีซ่า",
         "tagnote": "ป้ายสองแบบนี้เป็นมุมมองของเราเอง ไม่ใช่คำวินิจฉัยของใคร: <strong>ถามมากที่สุด</strong> คือสิ่งที่คนเดินเข้ามาถามจริง <strong>งานเอกสารใหญ่ที่สุด</strong> คือเรื่องที่เอกสารยาวที่สุดและผลลัพธ์อยู่ยาวที่สุด",
         "nav": [("../", "บริการในไทย"), ("./", "วีซ่าอเมริกา"), ("../farang-buddy/", "แอปฟรี"), ("../partners/", "พันธมิตร")],
-        "quote_h": "บอกเราว่าประเภทไหน",
+        "quote_h": "เริ่มเรื่องของคุณ",
         "quote_p": "หรือเล่าสถานการณ์มา แล้วเราจะบอกเองว่าเข้าข่ายประเภทใด",
         "other": ("English", "../../us-visas/"),
-        "foot": "บริษัทจดทะเบียนในประเทศไทย จังหวัดเชียงใหม่",
+        "foot": "บริการจัดเตรียมเอกสารวีซ่าสหรัฐ จังหวัดเชียงใหม่",
+        "run_h": "เรื่องหนึ่งเดินอย่างไร",
+        "run_p": "เจ็ดขั้น ขั้นที่ยาวที่สุดคือขั้นที่สี่",
+        "run": [
+            ("รับเรื่อง", "คุณต้องการอะไร ใครอยู่ฝั่งสหรัฐให้คุณ และเคยลองอะไรมาแล้ว ใช้เวลาราวหนึ่งชั่วโมง ภาษาไทยหรืออังกฤษก็ได้"),
+            ("เลือกประเภท", "เราบอกว่าประเภทไหนตรงกับคุณ และบอกตรง ๆ ถ้าอีกประเภทหนึ่งน่าจะดีกว่า"),
+            ("แผนหลักฐาน", "รายการเอกสารเรียงลำดับ พร้อมบอกว่าใครเป็นผู้ออกให้ เรื่องที่ถูกปฏิเสธส่วนใหญ่คือเอกสารที่ไม่มีใครขอไว้ทัน"),
+            ("งานเขียน", "ส่วนที่ต้องเขียน ไม่ใช่แค่รวบรวม ตรงนี้คือจุดที่แฟ้มหนึ่งชนะ"),
+            ("ทนายความตรวจ", "ทนายความด้านตรวจคนเข้าเมืองของสหรัฐตรวจและยื่น เราส่งมอบแฟ้มที่จัดมาเพื่อให้อ่าน ไม่ใช่กล่องเอกสาร"),
+            ("เตรียมสัมภาษณ์", "คำถามตามลำดับที่มันจะมาจริง ในภาษาที่คุณจะใช้ตอบ"),
+            ("หลังจากนั้น", "อนุมัติ ปฏิเสธ หรือขอหลักฐานเพิ่ม แต่ละทางมีหมากถัดไป และเราบอกว่าเป็นหมากไหน"),
+        ],
+        "write_h": "งานเขียน",
+        "write_p": "การรวบรวมเอกสารคือครึ่งที่มองเห็น ส่วนด้านล่างนี้คือสิ่งที่ต้องมีคนเขียน และเป็นส่วนที่เจ้าหน้าที่อ่านอย่างละเอียด",
+        "write": [
+            ("แผนธุรกิจ", "เขียนตามมาตรฐานที่ใช้พิจารณาจริง ทั้งตลาด โครงสร้าง เงินทุน และแผนการจ้างงานที่ตัวเลขรองรับได้"),
+            ("ที่มาของเงินทุน", "ทุกบาทมาจากไหน สาวถึงต้นทางที่คนนอกตรวจสอบได้ พร้อมเอกสารทุกทอด"),
+            ("การวิเคราะห์การจ้างงานและเศรษฐกิจ", "เงินลงทุนก้อนนี้ทำอะไรกับเศรษฐกิจในพื้นที่ เขียนในรูปแบบที่เจ้าหน้าที่คาดว่าจะได้เห็น"),
+            ("คำชี้แจงส่วนตัวและลำดับเหตุการณ์", "เรื่องความสัมพันธ์ อาชีพ หรือผลงาน เล่าครั้งเดียว ให้ตรงกันทั้งหมด และผูกกับหลักฐานทีละจุด"),
+            ("คำแปลรับรอง", "เอกสารราชการไทยเป็นภาษาอังกฤษ พร้อมรับรอง และสะกดชื่อให้ตรงกับพาสปอร์ต"),
+            ("การตอบหนังสือขอหลักฐานเพิ่ม", "ตอบสิ่งที่เขาถามจริง ตามลำดับที่เขาถาม"),
+        ],
+        "sep": "ส่วนนี้แยกจากบริการฝั่งประเทศไทยในเว็บเดียวกัน เรื่องที่ส่งจากหน้านี้ไปที่ทีมวีซ่าอเมริกาเท่านั้น",
+        "faq_h": "คำถามที่พบบ่อย",
+        "faq": [
+            ("คุณเป็นทนายความหรือเปล่า", "ไม่ใช่ และเราบอกไว้ทุกหน้า เราจัดแฟ้มและเขียนส่วนที่ต้องเขียน ส่วนคำปรึกษาทางกฎหมายและการยื่นเป็นของทนายความสหรัฐ ถ้าใครบอกคุณว่าคนที่ไม่ใช่ทนายทำส่วนนั้นได้ ให้เดินออกมา"),
+            ("เคยถูกปฏิเสธมาก่อน จบแล้วใช่ไหม", "ไม่ใช่ เป็นแค่จุดตั้งต้น สิ่งที่สำคัญคืออะไรเปลี่ยนไปตั้งแต่ตอนนั้น เขียนไว้และมีหลักฐาน ก่อนจะจ่ายค่าธรรมเนียมอีกครั้ง งานส่วนนี้เราเสนอราคาแยก"),
+            ("รับประกันผลได้ไหม", "ไม่มีใครรับประกันได้ และใครที่รับประกันคือกำลังขายของ สถานทูตเป็นผู้ตัดสิน สิ่งที่เราคุมได้คือแฟ้มนั้นพูดในสิ่งที่ควรพูดหรือเปล่า"),
+            ("ใช้เวลานานแค่ไหน", "ขึ้นกับประเภทและช่วงเวลา เราไม่ประกาศระยะเวลาไว้ในเว็บ เพราะพอเขียนเสร็จก็เก่าแล้ว ใบเสนอราคาจะบอกภาพปัจจุบันของเรื่องคุณ"),
+            ("อยู่จังหวัดอื่น ทำงานกับเชียงใหม่ได้ไหม", "ได้ งานส่วนใหญ่คือเอกสารและการคุยกัน ส่วนที่ต้องไปด้วยตัวเองคือวันสัมภาษณ์ และการเตรียมตัวเกิดขึ้นก่อนหน้านั้น"),
+            ("ราคาเท่าไร", "เสนอราคาเป็นลายลักษณ์อักษรต่อหนึ่งเรื่อง ก่อนเริ่มงาน งานเขียนคิดแยกจากงานจัดแฟ้ม เพราะเป็นงานคนละปริมาณ"),
+        ],
+        "f_name": "ชื่อ", "f_contact": "อีเมล LINE หรือ WhatsApp",
+        "f_cat": "ประเภทไหน", "f_cat_unsure": "ไม่แน่ใจ — ช่วยดูให้หน่อย",
+        "f_before": "เคยยื่นมาก่อนไหม",
+        "f_before_opts": ["ยังไม่เคย นี่เป็นครั้งแรก", "เคย และได้รับอนุมัติ", "เคย และถูกปฏิเสธ", "เคย และยังรออยู่"],
+        "f_who": "ฝั่งสหรัฐมีใคร", "f_who_ph": "นายจ้าง คู่สมรส สถานศึกษา ธุรกิจของคุณเอง หรือยังไม่มี",
+        "f_where": "คุณอยู่ที่ไหน", "f_where_ph": "เชียงใหม่ กรุงเทพ อีสาน ต่างประเทศ…",
+        "f_notes": "เล่าสถานการณ์ด้วยคำของคุณเอง",
+        "f_notes_ph": "วันที่สำคัญ การถูกปฏิเสธ กำหนดเส้นตาย ธุรกิจที่คุณทำอยู่แล้ว",
+        "f_send": "ส่ง", "f_status": "ข้อมูลนี้ไปที่ทีมวีซ่าอเมริกา",
+        "f_noscript_a": "เบราว์เซอร์ของคุณปิดสคริปต์อยู่ ส่งรายละเอียดเดียวกันมาที่ ",
+        "f_noscript_b": " แล้วราคาจะกลับไป",
     },
 }
 
@@ -108,7 +193,7 @@ def render(lang, data):
     url = f"{ORIGIN}/us-visas/" if lang == "en" else f"{ORIGIN}/th/us-visas/"
     alt_en = f"{ORIGIN}/us-visas/"
     alt_th = f"{ORIGIN}/th/us-visas/"
-    home = "../" if lang == "en" else "../"
+    home = "../"
     assets = "../assets" if lang == "en" else "../../assets"
 
     jump = "\n".join(
@@ -124,25 +209,57 @@ def render(lang, data):
                 f'<span class="pill {t}">{esc(tags[t][lang])}</span>' for t in it.get("tags", [])
             )
             rows.append(
-                f'''          <li class="visa">
-            <span class="code">{esc(it["code"])}</span>
-            <span class="body"><strong>{esc(it[lang]["name"])}</strong>
-              <span class="blurb">{esc(it[lang]["blurb"])}</span></span>
-            <span class="pills">{pills}</span>
-          </li>'''
+                '          <li class="visa">\n'
+                f'            <span class="code">{esc(it["code"])}</span>\n'
+                f'            <span class="body"><strong>{esc(it[lang]["name"])}</strong>\n'
+                f'              <span class="blurb">{esc(it[lang]["blurb"])}</span></span>\n'
+                f'            <span class="pills">{pills}</span>\n'
+                "          </li>"
             )
         groups.append(
-            f'''      <section class="vgroup" id="{g["id"]}">
-        <h3>{esc(g[lang]["name"])}</h3>
-        <p class="gblurb">{esc(g[lang]["blurb"])}</p>
-        <ul class="visas">
-{chr(10).join(rows)}
-        </ul>
-      </section>'''
+            f'      <section class="vgroup" id="{g["id"]}">\n'
+            f'        <h3>{esc(g[lang]["name"])}</h3>\n'
+            f'        <p class="gblurb">{esc(g[lang]["blurb"])}</p>\n'
+            '        <ul class="visas">\n'
+            + "\n".join(rows)
+            + "\n        </ul>\n      </section>"
         )
 
     lane = "\n".join(f"        <li>{esc(x)}</li>" for x in w["lane"])
     nav = "\n".join(f'      <a href="{h}">{esc(t)}</a>' for h, t in w["nav"])
+
+    run = "\n".join(
+        '      <div class="step rise">\n'
+        f"        <h3>{esc(t)}</h3>\n"
+        f"        <p>{esc(b)}</p>\n"
+        "      </div>"
+        for t, b in w["run"]
+    )
+
+    write = "\n".join(
+        '      <article class="card rise">\n'
+        f"        <h3>{esc(t)}</h3>\n"
+        f"        <p>{esc(b)}</p>\n"
+        "      </article>"
+        for t, b in w["write"]
+    )
+
+    faq = "\n".join(
+        f"      <details><summary>{esc(q)}</summary>\n        <p>{esc(a)}</p></details>"
+        for q, a in w["faq"]
+    )
+
+    # category picker, grouped exactly like the catalogue above it
+    opts = [f'            <option value="">{esc(w["f_cat_unsure"])}</option>']
+    for g in data["groups"]:
+        opts.append(f'            <optgroup label="{esc(g[lang]["name"])}">')
+        for it in g["items"]:
+            label = f'{it["code"]} — {it[lang]["name"]}'
+            opts.append(f"              <option>{esc(label)}</option>")
+        opts.append("            </optgroup>")
+    cat_options = "\n".join(opts)
+
+    before = "\n".join(f"            <option>{esc(o)}</option>" for o in w["f_before_opts"])
 
     services = []
     for g in data["groups"]:
@@ -157,30 +274,59 @@ def render(lang, data):
                     },
                 }
             )
+
     ld = {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "@id": url,
-        "url": url,
-        "name": w["title"],
-        "description": w["desc"],
-        "inLanguage": lang,
-        "isPartOf": {"@id": f"{ORIGIN}/#site"},
-        "about": {"@id": f"{ORIGIN}/#org"},
-        "mainEntity": {
-            "@type": "Service",
-            "name": "US visa document preparation for Thai nationals",
-            "provider": {"@id": f"{ORIGIN}/#org"},
-            "areaServed": {"@type": "Country", "name": "Thailand"},
-            "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "US visa categories prepared",
-                "itemListElement": services,
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": url,
+                "url": url,
+                "name": w["title"],
+                "description": w["desc"],
+                "inLanguage": lang,
+                "isPartOf": {"@id": f"{ORIGIN}/#site"},
+                "mainEntity": {"@id": f"{url}#service"},
             },
-        },
+            {
+                "@type": "Service",
+                "@id": f"{url}#service",
+                "name": "US visa document preparation for Thai nationals",
+                "serviceType": "Visa document preparation",
+                "areaServed": {"@type": "Country", "name": "Thailand"},
+                "availableLanguage": ["en", "th"],
+                "description": (
+                    "Assembly of the evidence file, certified translation, the written "
+                    "pieces (business plan, source-of-funds narrative, job-creation and "
+                    "economic analysis, personal statement) and interview preparation. "
+                    "Legal advice and filings go through a US immigration attorney."
+                ),
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "US visa categories prepared",
+                    "itemListElement": services,
+                },
+            },
+            {
+                "@type": "FAQPage",
+                "@id": f"{url}#faq",
+                "inLanguage": lang,
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": q,
+                        "acceptedAnswer": {"@type": "Answer", "text": a},
+                    }
+                    for q, a in w["faq"]
+                ],
+            },
+        ],
     }
 
-    return f'''<!doctype html>
+    other_lang = "th" if lang == "en" else "en"
+    locale = "en_US" if lang == "en" else "th_TH"
+
+    return f"""<!doctype html>
 <html lang="{w["lang"]}">
 <head>
 <meta charset="utf-8">
@@ -198,7 +344,7 @@ def render(lang, data):
 <meta property="og:description" content="{esc(w["desc"])}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{ORIGIN}/assets/share.png">
-<meta property="og:locale" content="{"en_US" if lang == "en" else "th_TH"}">
+<meta property="og:locale" content="{locale}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#fbf8f2" media="(prefers-color-scheme:light)">
 <meta name="theme-color" content="#131110" media="(prefers-color-scheme:dark)">
@@ -210,14 +356,14 @@ def render(lang, data):
 </script>
 </head>
 <body>
-<a class="skip" href="#cats">{esc(w["cats"])}</a>
+<a class="skip" href="#quote">{esc(w["quote_h"])}</a>
 
 <header class="top" id="top">
   <div class="wrap">
     <a class="mark" href="{home}">{mark_svg()}{wordmark(lang)}</a>
     <nav class="nav">
 {nav}
-      <a class="lang" href="{w["other"][1]}" hreflang="{"th" if lang == "en" else "en"}">{esc(w["other"][0])}</a>
+      <a class="lang" href="{w["other"][1]}" hreflang="{other_lang}">{esc(w["other"][0])}</a>
       <a class="btn accent" href="#quote">{esc(w["cta"])}</a>
     </nav>
   </div>
@@ -229,8 +375,8 @@ def render(lang, data):
     <p class="eyebrow"><span class="dot"></span> {esc(w["eyebrow"])}</p>
     <h1>{esc(w["h1"])}</h1>
     <p class="lede">{esc(w["lede"])}</p>
-    <div class="cta-row"><a class="btn accent" href="#quote">{esc(w["cta"])}</a></div>
-    <p class="chip" id="refchip">Ref <code id="refcode"></code></p>
+    <div class="cta-row"><a class="btn accent" href="#quote">{esc(w["cta"])}</a>
+      <a class="btn ghost" href="#cats">{esc(w["cats"])}</a></div>
   </div>
 </section>
 
@@ -240,6 +386,30 @@ def render(lang, data):
     <ul class="ticks lane">
 {lane}
     </ul>
+  </div>
+</section>
+
+<section id="run">
+  <div class="wrap">
+    <div class="section-head rise">
+      <h2>{esc(w["run_h"])}</h2>
+      <p>{esc(w["run_p"])}</p>
+    </div>
+    <div class="steps">
+{run}
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="written">
+  <div class="wrap">
+    <div class="section-head rise">
+      <h2>{esc(w["write_h"])}</h2>
+      <p>{esc(w["write_p"])}</p>
+    </div>
+    <div class="grid">
+{write}
+    </div>
   </div>
 </section>
 
@@ -257,13 +427,76 @@ def render(lang, data):
   </div>
 </section>
 
-<section class="alt" id="quote">
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="section-head rise"><h2>{esc(w["faq_h"])}</h2></div>
+    <div class="faq">
+{faq}
+    </div>
+  </div>
+</section>
+
+<section id="quote">
   <div class="wrap">
     <div class="section-head rise">
       <h2>{esc(w["quote_h"])}</h2>
       <p>{esc(w["quote_p"])}</p>
     </div>
-    <p><a class="btn accent" href="{home}#quote">{esc(w["cta"])}</a></p>
+
+    <form class="panel" id="quoteform" data-line="us" novalidate>
+      <div class="fields">
+        <div class="field">
+          <label for="f-name">{esc(w["f_name"])}</label>
+          <input id="f-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-contact">{esc(w["f_contact"])}</label>
+          <input id="f-contact" name="contact" autocomplete="email" required>
+        </div>
+        <div class="field wide">
+          <label for="f-visa">{esc(w["f_cat"])}</label>
+          <select id="f-visa" name="visa">
+{cat_options}
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-need">{esc(w["f_before"])}</label>
+          <select id="f-need" name="need">
+{before}
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-who">{esc(w["f_who"])}</label>
+          <input id="f-who" name="who" placeholder="{esc(w["f_who_ph"])}">
+        </div>
+        <div class="field">
+          <label for="f-where">{esc(w["f_where"])}</label>
+          <input id="f-where" name="where" placeholder="{esc(w["f_where_ph"])}">
+        </div>
+        <div class="field wide">
+          <label for="f-notes">{esc(w["f_notes"])}</label>
+          <textarea id="f-notes" name="notes" placeholder="{esc(w["f_notes_ph"])}"></textarea>
+        </div>
+        <div class="field hp" aria-hidden="true">
+          <label for="f-company">Company</label>
+          <input id="f-company" name="company" tabindex="-1" autocomplete="off">
+        </div>
+      </div>
+
+      <input type="hidden" name="origin" id="f-origin">
+      <input type="hidden" name="line" id="f-line">
+      <input type="hidden" name="ref" id="f-ref">
+      <input type="hidden" name="page" id="f-page">
+      <input type="hidden" name="landing" id="f-landing">
+
+      <div class="form-foot">
+        <button class="btn accent" type="submit" id="f-submit">{esc(w["f_send"])}</button>
+        <p class="status" id="f-status" role="status" aria-live="polite">{esc(w["f_status"])}</p>
+      </div>
+      <noscript><p class="hint" style="margin-top:1rem">{esc(w["f_noscript_a"])}<a href="mailto:{INBOX}">{INBOX}</a>{esc(w["f_noscript_b"])}</p></noscript>
+    </form>
+
+    <p class="hint" style="margin-top:1.4rem;max-width:62ch">{esc(w["sep"])}</p>
   </div>
 </section>
 </main>
@@ -277,14 +510,14 @@ def render(lang, data):
     </div>
     <nav>
 {nav}
-      <a href="{w["other"][1]}" hreflang="{"th" if lang == "en" else "en"}">{esc(w["other"][0])}</a>
+      <a href="{w["other"][1]}" hreflang="{other_lang}">{esc(w["other"][0])}</a>
     </nav>
   </div>
 </footer>
 <script src="{assets}/app.js"></script>
 </body>
 </html>
-'''
+"""
 
 
 def main():

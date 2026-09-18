@@ -5,6 +5,9 @@
 
 Every enquiry the Worker records carries two codes:
 
+    line     which book of business it belongs to. "th" is the shared
+             Thailand-side desk; "us" is the US-outbound book, which has its
+             own recipients and its own code and is counted separately.
     origin   stamped server-side on every enquiry that came through this site.
              It does not depend on a URL parameter surviving, so it is the
              line the desk's own commission is calculated from.
@@ -86,6 +89,10 @@ def period():
 def statement(rows, start, end, label):
     rows = [r for r in rows if start <= (r.get("received_at") or "")[:10] < end]
     origin_code = cfg("originCode") or "DESK"
+    origin_us = cfg("originCodeUs") or "USOUT"
+
+    th = [r for r in rows if (r.get("line") or "th") != "us"]
+    us = [r for r in rows if (r.get("line") or "th") == "us"]
 
     by_origin, by_ref = {}, {}
     for r in rows:
@@ -104,14 +111,19 @@ def statement(rows, start, end, label):
     w(f"  ENQUIRIES THROUGH THIS SITE                       {len(rows):>6}")
     w("=" * 62)
     w("")
+    w("  TWO BOOKS, COUNTED APART")
+    w("  " + "-" * 58)
+    w(f"    Thailand side, shared desk    {origin_code:<12} {len(th):>6}")
+    w(f"    US visas, own book            {origin_us:<12} {len(us):>6}")
+    w("")
     w("  Every one of these carries the origin stamp, set by the Worker")
     w("  rather than by the visitor's URL. They are the desk's line.")
     w("")
     w("  BY ORIGIN")
     w("  " + "-" * 58)
+    labels = {origin_code: "  shared desk", origin_us: "  own book"}
     for k in sorted(by_origin, key=lambda k: -by_origin[k]):
-        mark = "  <- ours" if k == origin_code else ""
-        w(f"    {k:<20} {by_origin[k]:>6}{mark}")
+        w(f"    {k:<20} {by_origin[k]:>6}{labels.get(k, '')}")
     w("")
     if by_ref:
         w("  PARTNER CODES ALONGSIDE  (their share comes out of ours)")
@@ -124,13 +136,24 @@ def statement(rows, start, end, label):
     else:
         w("  No partner codes in this period.")
     w("")
-    w("  BY SERVICE")
+    w("  THAILAND SIDE, BY SERVICE")
     w("  " + "-" * 58)
     need = {}
-    for r in rows:
+    for r in th:
         need[r.get("need") or "—"] = need.get(r.get("need") or "—", 0) + 1
-    for k in sorted(need, key=lambda k: -need[k]):
-        w(f"    {k:<28} {need[k]:>6}")
+    for k in sorted(need, key=lambda k: -need[k]) or ["—"]:
+        w(f"    {k:<28} {need.get(k, 0):>6}")
+    w("")
+    w("  US VISAS, BY CATEGORY")
+    w("  " + "-" * 58)
+    cat = {}
+    for r in us:
+        cat[r.get("visa") or "not sure"] = cat.get(r.get("visa") or "not sure", 0) + 1
+    if cat:
+        for k in sorted(cat, key=lambda k: -cat[k]):
+            w(f"    {k:<28} {cat[k]:>6}")
+    else:
+        w("    none in this period")
     w("")
     w("=" * 62)
     w("  What this counts: enquiries the Worker wrote to its table.")
@@ -144,7 +167,7 @@ def statement(rows, start, end, label):
 
 def rows_from_somewhere():
     print("\n   Reading the table…")
-    rows = query("SELECT id, received_at, origin, ref, need, visa, area, page FROM enquiries")
+    rows = query("SELECT id, received_at, line, origin, ref, need, visa, area, page FROM enquiries")
     if rows is not None:
         print(f"   {len(rows)} row(s) from D1.")
         return rows
@@ -164,8 +187,9 @@ def main():
         print("   COMMISSION STATEMENT")
         print("━" * 62)
         print()
-        print(f"   Origin code:  {cfg('originCode') or 'DESK'}")
-        print(f"   Site:         {cfg('domain')}")
+        print(f"   Thailand side:  {cfg('originCode') or 'DESK'}   (shared desk)")
+        print(f"   US visas:       {cfg('originCodeUs') or 'USOUT'}   (own book)")
+        print(f"   Site:           {cfg('domain')}")
         print()
         print("   1.   Build a statement")
         print()

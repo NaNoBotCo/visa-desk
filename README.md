@@ -24,8 +24,11 @@ for your own city in about a minute.
   paired by `hreflang` in both directions and in the sitemap. A check fails the
   build if a pair breaks.
 - **A visa catalogue from data.** Thirty-one categories in `data/us-visas.json`,
-  rendered into both languages with tags, jump links and `OfferCatalog`
-  structured data.
+  rendered into both languages with tags, jump links, an intake form grouped
+  the same way, and `OfferCatalog` + `FAQPage` structured data.
+- **Two books of business on one site.** Enquiries carry a line, and the Worker
+  routes and stamps each to its own recipients and its own code. Sharing a
+  website does not mean sharing a customer list.
 - **Attribution you cannot lose.** Every enquiry is stamped server-side with
   the site's own origin code, which the page is not allowed to set — so your
   commission does not ride on a query string surviving. Partner codes sit
@@ -80,6 +83,13 @@ still stamped. This is the line your own commission is calculated from.
 rather than replacing it. A guesthouse's share comes out of yours; it never
 takes your line away.
 
+**Two books, one website.** Pages carry a `line`. `th` is the shared
+Thailand-side desk; `us` is a separate book with its own origin code, its own
+recipient list and no fallback to the shared one. A form declares which it
+belongs to with `data-line`, the Worker decides the stamp and the routing from
+that, and `make ledger` counts the two apart. Delete the `us` pages and the
+second book disappears without touching the first.
+
 ```
 https://your-domain.com/?ref=PUNSPACE     →  origin=CMVD  ref=PUNSPACE
 https://your-domain.com/                  →  origin=CMVD  ref=
@@ -87,7 +97,7 @@ https://your-domain.com/                  →  origin=CMVD  ref=
 
 | | origin | ref |
 |---|---|---|
-| Set by | the Worker, from `ORIGIN_CODE` | the visitor's URL |
+| Set by | the Worker, from `ORIGIN_CODE` / `ORIGIN_CODE_US` | the visitor's URL |
 | Present | on every enquiry | when someone referred them |
 | Can a visitor remove it | no | yes |
 | Kept for | — | 90 days (`config.js` → `ref.days`) |
