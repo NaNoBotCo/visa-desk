@@ -127,6 +127,19 @@ def main():
         else:
             ok("US visa pages match data/us-visas.json")
 
+    bad_links = []
+    for rel in PAGES:
+        f = SITE / rel
+        if not f.exists():
+            continue
+        for m in re.findall(r'href="([^"]*index\.html[^"]*)"', f.read_text()):
+            bad_links.append(f"{rel} -> {m}")
+    if bad_links:
+        for b in bad_links:
+            fail(f"link to index.html, which the host redirects: {b}")
+    else:
+        ok("internal links use the directory form the canonical tags declare")
+
     print("\ncontrast\n")
     import subprocess as _sp
     r = _sp.run([sys.executable, str(ROOT / "tools" / "contrast.py")], capture_output=True, text=True)
