@@ -8,8 +8,8 @@ A small, fast, near-buildless website for a visa service — in two languages,
 with a 31-category visa catalogue, a free app to give away, and the referral
 machinery that pays the people who send it customers.
 
-Running at **[chiangmaivisadesk.com](https://chiangmaivisadesk.com)**. Clone it
-for your own city in about a minute.
+Running at **[chiangmaivisadesk.com](https://chiangmaivisadesk.com)** — ten
+pages, English and Thai. Clone it for your own city in about a minute.
 
 ![The home page](docs/screenshots/home-light.png)
 

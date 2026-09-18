@@ -2,8 +2,10 @@
   "name": "visa-desk-intake",
   "main": "src/index.js",
   "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "preview_urls": false,
   "vars": {
-    "SITE_ORIGIN": "https://chiangmaivisadesk.com,https://www.chiangmaivisadesk.com,https://visa-desk.nanobotco.workers.dev",
+    "SITE_ORIGIN": "https://chiangmaivisadesk.com,https://www.chiangmaivisadesk.com",
     "ORIGIN_CODE": "CMVD",
     "ORIGIN_CODE_US": "USOUT",
     "ORIGIN_CODE_WL": "WLABEL",

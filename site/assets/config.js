@@ -8,7 +8,7 @@ window.DESK = {
 
   // Where the quote form posts. Leave empty and the form falls back to a
   // pre-filled email, so the page still works with nothing behind it.
-  endpoint: "https://visa-desk-intake.nanobotco.workers.dev/quote",
+  endpoint: "https://api.chiangmaivisadesk.com/quote",
 
   // Reply-to inbox used by the email fallback.
   inbox: "hello@chiangmaivisadesk.com",
