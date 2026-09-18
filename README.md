@@ -271,3 +271,7 @@ height opens up for Thai ascenders and descenders.
 See [LICENSE](LICENSE). The template — HTML, CSS, JavaScript, the tools and the
 Worker — is MIT. The name, the wordmark and the service copy belong to the desk
 that runs it; `tools/brand.py` exists so that replacing them takes one command.
+
+---
+
+Contact: Nan · nan@motdang.net · Sponsor: [Ko-fi](https://ko-fi.com/defiantchiangmai) · [Patreon](https://www.patreon.com/nanobotco)
