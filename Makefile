@@ -1,4 +1,4 @@
-.PHONY: dev check brand codes visas ledger licence deploy
+.PHONY: dev check contrast brand codes visas ledger licence deploy
 
 PORT ?= 4173
 
@@ -8,6 +8,9 @@ dev:
 
 check:
 	@python3 tools/check.py
+
+contrast:
+	@python3 tools/contrast.py
 
 brand:
 	@python3 tools/brand.py

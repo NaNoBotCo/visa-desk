@@ -79,34 +79,34 @@ def qr_data_uri(url):
     import io
     import base64
     buf = io.BytesIO()
-    segno.make(url, error="h").save(buf, kind="png", scale=12, border=2, dark="#17130f")
+    segno.make(url, error="h").save(buf, kind="png", scale=12, border=2, dark="#14161C")
     return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
 def sticker(code, name, url, out_png):
     """A card a guesthouse can print and put on the desk."""
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400">
-  <rect width="1000" height="1400" fill="#fbf8f2"/>
+  <rect width="1000" height="1400" fill="#F7F4EC"/>
   <rect x="34" y="34" width="932" height="1332" rx="44" fill="none"
-        stroke="#e4dacb" stroke-width="4"/>
+        stroke="#DED7C9" stroke-width="4"/>
   <g transform="translate(90,110)">
-    <rect x="0" y="0" width="70" height="70" rx="18" fill="#17130f"/>
-    <rect x="11" y="11" width="48" height="48" rx="12" fill="none" stroke="#f3ece1"
+    <rect x="0" y="0" width="70" height="70" rx="18" fill="#14161C"/>
+    <rect x="11" y="11" width="48" height="48" rx="12" fill="none" stroke="#F1EEE5"
           stroke-width="3.4" stroke-dasharray="6 4.6"/>
-    <path d="M23 36l8 8 16.5-19" fill="none" stroke="#c9761a" stroke-width="5.4"
+    <path d="M23 36l8 8 16.5-19" fill="none" stroke="#C79A3A" stroke-width="5.4"
           stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="94" y="47" font-family="Georgia,serif" font-size="33" fill="#4a3f35">Chiang Mai <tspan font-weight="700" fill="#191410">Visa Desk</tspan></text>
+    <text x="94" y="47" font-family="Georgia,serif" font-size="33" fill="#454C59">Chiang Mai <tspan font-weight="700" fill="#14161C">Visa Desk</tspan></text>
   </g>
-  <text x="90" y="290" font-family="Georgia,serif" font-size="60" font-weight="700" fill="#191410">Visas and border runs</text>
-  <text x="90" y="356" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#4a3f35">Point your camera. Ask for a price.</text>
+  <text x="90" y="290" font-family="Georgia,serif" font-size="60" font-weight="700" fill="#14161C">Visas and border runs</text>
+  <text x="90" y="356" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#454C59">Point your camera. Ask for a price.</text>
   <image href="{qr_data_uri(url)}" x="235" y="430" width="530" height="530"/>
-  <rect x="90" y="1030" width="820" height="96" rx="48" fill="#f6e3cb"/>
+  <rect x="90" y="1030" width="820" height="96" rx="48" fill="#F4E7CE"/>
   <text x="500" y="1090" text-anchor="middle" font-family="ui-monospace,Menlo,monospace"
-        font-size="40" font-weight="700" fill="#6b4a2f" letter-spacing="3">{code}</text>
+        font-size="40" font-weight="700" fill="#7A540D" letter-spacing="3">{code}</text>
   <text x="500" y="1200" text-anchor="middle" font-family="Helvetica,Arial,sans-serif"
-        font-size="29" fill="#7b6d5f">{esc(name)}</text>
+        font-size="29" fill="#5F6775">{esc(name)}</text>
   <text x="500" y="1290" text-anchor="middle" font-family="Helvetica,Arial,sans-serif"
-        font-size="26" fill="#7b6d5f">{esc(url)}</text>
+        font-size="26" fill="#5F6775">{esc(url)}</text>
 </svg>"""
     tmp = out_png.with_suffix(".svg")
     tmp.write_text(svg)

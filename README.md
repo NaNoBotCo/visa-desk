@@ -164,12 +164,28 @@ wrangler deploy
 |---|---|
 | `make dev` | serve `site/` at http://localhost:4173 |
 | `make check` | the checks below |
+| `make contrast` | measure every colour pair in both schemes |
 | `make brand` | brand menu (name, domain, inbox, redraw the card) |
 | `make visas` | rebuild the visa catalogue pages from `data/us-visas.json` |
 | `make codes` | partner code menu |
 | `make ledger` | commission statement for a period |
 | `make licence` | mint a licence for a white-label copy |
 | `make deploy` | Cloudflare Pages |
+
+## Colour, and proving it
+
+The palette is northern Thai by material rather than by flag: mo hom indigo —
+the dyer's cloth of Phrae and Chiang Mai — against rice paper, temple gold for
+small marks, Sangkhalok celadon for anything that means yes.
+
+Every pair the page actually puts together is measured. `make contrast` reads
+the tokens for both schemes, computes the WCAG 2.1 ratio for each pair, and
+fails under target: 7:1 for body text, 4.5:1 for secondary text and any label
+on a fill, 3:1 for input borders and focus rings. It runs inside `make check`
+and in CI, so a palette change cannot quietly drop below them.
+
+It caught two real faults in the palette it replaced: white on the old accent
+fill was 3.45:1, and the dark-mode referral chip was 1.72:1.
 
 ## Checks
 
@@ -186,6 +202,7 @@ wrangler deploy
 - any name listed in `.names-not-on-the-site`, a local, gitignored file — one
   name per line — for sites that are deliberately unsigned
 - a home-directory path in any tracked file
+- a colour pair under its contrast target, in either scheme
 
 The same checks run in CI on every push.
 
@@ -219,6 +236,7 @@ tools/
   build_visas.py        render the catalogue into both languages
   ledger.py             statement by book, licence and partner code
   licence.py            mint a licence for a white-label copy
+  contrast.py           WCAG ratios for every pair, both schemes
   check.py              the checks
 worker/
   src/index.js          POST /quote → D1 → mail to everyone on the desk

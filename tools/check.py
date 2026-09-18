@@ -127,6 +127,16 @@ def main():
         else:
             ok("US visa pages match data/us-visas.json")
 
+    print("\ncontrast\n")
+    import subprocess as _sp
+    r = _sp.run([sys.executable, str(ROOT / "tools" / "contrast.py")], capture_output=True, text=True)
+    if r.returncode == 0:
+        ok("every colour pair on the page meets its target")
+    else:
+        for ln in r.stdout.splitlines():
+            if "FAIL" in ln:
+                fail(ln.strip())
+
     print("\nhygiene\n")
 
     # Hosts the site is allowed to point at: the configured backend, and the

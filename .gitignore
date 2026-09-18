@@ -27,3 +27,7 @@ statements/
 
 # White-label register: real licensees.
 licences-private/
+
+# Touches the Cloudflare account; stays on this machine.
+tools/finish_email.py
+Finish email.command

@@ -16,8 +16,10 @@ jobs:
           python-version: "3.12"
       - name: Site checks
         run: python3 tools/check.py
+      - name: Colour contrast
+        run: python3 tools/contrast.py
       - name: Tools import cleanly
         run: |
-          python3 -m py_compile tools/brand.py tools/codes.py tools/check.py
+          python3 -m py_compile tools/brand.py tools/codes.py tools/check.py tools/contrast.py tools/ledger.py tools/licence.py tools/build_visas.py
       - name: Worker parses
         run: node --check worker/src/index.js

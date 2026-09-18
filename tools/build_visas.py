@@ -86,13 +86,13 @@ WORDS = {
             ("What does it cost?", "We give a written price for each case before any work starts. The writing is priced separately from collecting the documents, because they are different amounts of work."),
         ],
         "f_name": "Name", "f_contact": "Email, LINE or WhatsApp",
-        "f_cat": "Which category", "f_cat_unsure": "Not sure — tell me",
+        "f_cat": "Which category", "f_cat_unsure": "I am not sure",
         "f_before": "Have you applied before?",
         "f_before_opts": ["No, this is the first time", "Yes, and it was approved", "Yes, and it was refused", "Yes, and it is still pending"],
-        "f_who": "Who is on the US side", "f_who_ph": "An employer, a spouse, a school, a business of your own, nobody yet",
-        "f_where": "Where you are", "f_where_ph": "Chiang Mai, Bangkok, Isaan, abroad…",
+        "f_who": "Who is on the US side", "f_who_ph": "For example: an employer, a spouse, a school, your own business, or nobody yet",
+        "f_where": "Where you are", "f_where_ph": "For example: Chiang Mai, Bangkok, Isaan, or abroad",
         "f_notes": "The situation, in your own words",
-        "f_notes_ph": "Dates that matter, a refusal, a deadline, a business you already run.",
+        "f_notes_ph": "For example: important dates, an earlier refusal, a deadline, or a business you already run.",
         "f_send": "Send it", "f_status": "This goes to the US desk.",
         "f_noscript_a": "Your browser is not running scripts. Email the same details to ",
         "f_noscript_b": " and a price comes back.",
@@ -153,13 +153,13 @@ WORDS = {
             ("ราคาเท่าไร", "เสนอราคาเป็นลายลักษณ์อักษรต่อหนึ่งเรื่อง ก่อนเริ่มงาน งานเขียนคิดแยกจากงานจัดแฟ้ม เพราะเป็นงานคนละปริมาณ"),
         ],
         "f_name": "ชื่อ", "f_contact": "อีเมล LINE หรือ WhatsApp",
-        "f_cat": "ประเภทไหน", "f_cat_unsure": "ไม่แน่ใจ — ช่วยดูให้หน่อย",
+        "f_cat": "ประเภทไหน", "f_cat_unsure": "ไม่แน่ใจ",
         "f_before": "เคยยื่นมาก่อนไหม",
         "f_before_opts": ["ยังไม่เคย นี่เป็นครั้งแรก", "เคย และได้รับอนุมัติ", "เคย และถูกปฏิเสธ", "เคย และยังรออยู่"],
-        "f_who": "ฝั่งสหรัฐมีใคร", "f_who_ph": "นายจ้าง คู่สมรส สถานศึกษา ธุรกิจของคุณเอง หรือยังไม่มี",
-        "f_where": "คุณอยู่ที่ไหน", "f_where_ph": "เชียงใหม่ กรุงเทพ อีสาน ต่างประเทศ…",
+        "f_who": "ฝั่งสหรัฐมีใคร", "f_who_ph": "เช่น นายจ้าง คู่สมรส สถานศึกษา ธุรกิจของคุณเอง หรือยังไม่มี",
+        "f_where": "คุณอยู่ที่ไหน", "f_where_ph": "เช่น เชียงใหม่ กรุงเทพ อีสาน หรือต่างประเทศ",
         "f_notes": "เล่าสถานการณ์ด้วยคำของคุณเอง",
-        "f_notes_ph": "วันที่สำคัญ การถูกปฏิเสธ กำหนดเส้นตาย ธุรกิจที่คุณทำอยู่แล้ว",
+        "f_notes_ph": "เช่น วันที่สำคัญ เคยถูกปฏิเสธ กำหนดเส้นตาย หรือธุรกิจที่คุณทำอยู่",
         "f_send": "ส่ง", "f_status": "ข้อมูลนี้ไปที่ทีมวีซ่าอเมริกา",
         "f_noscript_a": "เบราว์เซอร์ของคุณปิดสคริปต์อยู่ ส่งรายละเอียดเดียวกันมาที่ ",
         "f_noscript_b": " แล้วราคาจะกลับไป",
@@ -176,7 +176,7 @@ def mark_svg():
         '<svg class="stamp" viewBox="0 0 40 40" aria-hidden="true">'
         '<rect x="2" y="2" width="36" height="36" rx="9" fill="none" stroke="currentColor" '
         'stroke-width="2.2" stroke-dasharray="4.2 3.1"/>'
-        '<path d="M12 21.5l5.4 5.4L28.6 15" fill="none" stroke="#c9761a" stroke-width="3.4" '
+        '<path d="M12 21.5l5.4 5.4L28.6 15" fill="none" stroke="#C79A3A" stroke-width="3.4" '
         'stroke-linecap="round" stroke-linejoin="round"/></svg>'
     )
 
@@ -348,8 +348,8 @@ def render(lang, data):
 <meta property="og:image" content="{ORIGIN}/assets/share.png">
 <meta property="og:locale" content="{locale}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#fbf8f2" media="(prefers-color-scheme:light)">
-<meta name="theme-color" content="#131110" media="(prefers-color-scheme:dark)">
+<meta name="theme-color" content="#F7F4EC" media="(prefers-color-scheme:light)">
+<meta name="theme-color" content="#111319" media="(prefers-color-scheme:dark)">
 <link rel="icon" href="{assets}/mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{assets}/style.css">
 <script src="{assets}/config.js"></script>

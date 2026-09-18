@@ -100,7 +100,7 @@ def set_cname(domain):
 
 # ------------------------------------------------------------------- artwork
 
-def wordmark_svg(name, x, y, size, light_fill="#4a3f35", strong_fill="#191410"):
+def wordmark_svg(name, x, y, size, light_fill="#454C59", strong_fill="#14161C"):
     light, strong = split_name(name)
     if light:
         return (f'<text x="{x}" y="{y}" font-family="Georgia,\'Times New Roman\',serif" '
@@ -119,33 +119,33 @@ def draw_share(cfg, out):
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fbf8f2"/><stop offset="1" stop-color="#f1e7d6"/>
+      <stop offset="0" stop-color="#F7F4EC"/><stop offset="1" stop-color="#EFE1C8"/>
     </linearGradient>
     <radialGradient id="g1" cx="0.18" cy="0.2" r="0.7">
-      <stop offset="0" stop-color="#c9761a" stop-opacity="0.26"/><stop offset="1" stop-color="#c9761a" stop-opacity="0"/>
+      <stop offset="0" stop-color="#C79A3A" stop-opacity="0.26"/><stop offset="1" stop-color="#C79A3A" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="g2" cx="0.92" cy="0.08" r="0.6">
-      <stop offset="0" stop-color="#2c6a58" stop-opacity="0.20"/><stop offset="1" stop-color="#2c6a58" stop-opacity="0"/>
+      <stop offset="0" stop-color="#3B7361" stop-opacity="0.20"/><stop offset="1" stop-color="#3B7361" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect width="1200" height="630" fill="url(#g1)"/>
   <rect width="1200" height="630" fill="url(#g2)"/>
   <g transform="translate(88,84)">
-    <rect x="0" y="0" width="64" height="64" rx="16" fill="#17130f"/>
-    <rect x="10" y="10" width="44" height="44" rx="11" fill="none" stroke="#f3ece1" stroke-width="3" stroke-dasharray="5.6 4.4"/>
-    <path d="M21 33l7.4 7.4L43.5 26" fill="none" stroke="#c9761a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="0" y="0" width="64" height="64" rx="16" fill="#14161C"/>
+    <rect x="10" y="10" width="44" height="44" rx="11" fill="none" stroke="#F1EEE5" stroke-width="3" stroke-dasharray="5.6 4.4"/>
+    <path d="M21 33l7.4 7.4L43.5 26" fill="none" stroke="#C79A3A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
     {wordmark_svg(cfg['name'], 86, 43, 30)}
   </g>
-  <text x="88" y="316" font-family="Georgia,'Times New Roman',serif" font-size="98" font-weight="700" fill="#191410" letter-spacing="-2">{esc(headline)}</text>
-  <text x="88" y="392" font-family="Helvetica,Arial,sans-serif" font-size="35" fill="#4a3f35">Extensions · reporting · re-entry permits · border runs</text>
-  <text x="88" y="446" font-family="Helvetica,Arial,sans-serif" font-size="35" fill="#4a3f35">Chiang Mai, northern Thailand</text>
-  <rect x="88" y="506" width="336" height="66" rx="33" fill="#c9761a"/>
+  <text x="88" y="316" font-family="Georgia,'Times New Roman',serif" font-size="98" font-weight="700" fill="#14161C" letter-spacing="-2">{esc(headline)}</text>
+  <text x="88" y="392" font-family="Helvetica,Arial,sans-serif" font-size="35" fill="#454C59">Extensions · reporting · re-entry permits · border runs</text>
+  <text x="88" y="446" font-family="Helvetica,Arial,sans-serif" font-size="35" fill="#454C59">Chiang Mai, northern Thailand</text>
+  <rect x="88" y="506" width="336" height="66" rx="33" fill="#C79A3A"/>
   <text x="256" y="548" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="27" font-weight="700" fill="#ffffff">Get a quote</text>
-  <text x="452" y="548" font-family="Helvetica,Arial,sans-serif" font-size="26" fill="#7b6d5f">{esc(cfg['domain'])}</text>
+  <text x="452" y="548" font-family="Helvetica,Arial,sans-serif" font-size="26" fill="#5F6775">{esc(cfg['domain'])}</text>
   <g opacity="0.16" transform="translate(880,300) rotate(-14)">
-    <rect x="0" y="0" width="250" height="250" rx="34" fill="none" stroke="#17130f" stroke-width="9" stroke-dasharray="20 15"/>
-    <path d="M66 132l44 44 82-94" fill="none" stroke="#17130f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="0" y="0" width="250" height="250" rx="34" fill="none" stroke="#14161C" stroke-width="9" stroke-dasharray="20 15"/>
+    <path d="M66 132l44 44 82-94" fill="none" stroke="#14161C" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>"""
     tmp = out.with_suffix(".tmp.svg")
