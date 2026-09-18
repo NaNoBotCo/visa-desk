@@ -17,15 +17,30 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 CONFIG = SITE / "assets" / "config.js"
 
+# Hosts the site may LINK to. Everything a page LOADS still has to be
+# same-origin; these are destinations a person taps, not resources fetched.
+SHARE_HOSTS = {
+    "line.me", "social-plugins.line.me", "wa.me", "t.me",
+    "twitter.com", "x.com", "www.facebook.com",
+}
+VOCAB_HOSTS = {
+    "schema.org", "creativecommons.org", "api.resend.com",
+    "sitemaps.org", "www.sitemaps.org", "www.w3.org",
+}
+
 PAGES = ["index.html", "us-visas/index.html", "farang-buddy/index.html", "partners/index.html",
-         "th/index.html", "th/us-visas/index.html", "th/farang-buddy/index.html", "th/partners/index.html"]
+         "white-label/index.html",
+         "th/index.html", "th/us-visas/index.html", "th/farang-buddy/index.html",
+         "th/partners/index.html", "th/white-label/index.html"]
 PAIRS = [("index.html", "th/index.html"),
          ("us-visas/index.html", "th/us-visas/index.html"),
          ("farang-buddy/index.html", "th/farang-buddy/index.html"),
-         ("partners/index.html", "th/partners/index.html")]
+         ("partners/index.html", "th/partners/index.html"),
+         ("white-label/index.html", "th/white-label/index.html")]
 REQUIRED = ["robots.txt", "sitemap.xml", "llms.txt", "assets/style.css",
             "assets/app.js", "assets/config.js", "assets/share.png", "assets/mark.svg",
-            "assets/farang-buddy-qr.png"]
+            "assets/farang-buddy-qr.png",
+            "assets/line-qr.png", "assets/site-qr.png"]
 
 fails = []
 
@@ -114,12 +129,22 @@ def main():
 
     print("\nhygiene\n")
 
+    # Hosts the site is allowed to point at: the configured backend, and the
+    # free app it gives away.
+    endpoint = config_value("endpoint")
+    extra = {"farangbuddy.netlify.app"}          # the free app the site gives away
+    credit = config_value("url")                  # whoever built it
+    for candidate in (endpoint, credit):
+        if candidate:
+            m = re.match(r"https?://([^/]+)", candidate)
+            if m:
+                extra.add(m.group(1))
+
     stale = []
     for p in text_files():
         s = p.read_text()
         for m in re.findall(r'https?://([a-z0-9.-]+\.[a-z]{2,})', s):
-            if m.endswith(("schema.org", "creativecommons.org", "api.resend.com",
-                           "sitemaps.org", "www.w3.org", "farangbuddy.netlify.app")):
+            if m in VOCAB_HOSTS or m in SHARE_HOSTS or m in extra:
                 continue
             if m != domain:
                 stale.append(f"{p.relative_to(SITE)} -> {m}")

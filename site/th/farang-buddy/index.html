@@ -69,7 +69,7 @@
     <div>
       <p class="eyebrow"><span class="dot"></span> <span class="free">ใช้ฟรี</span></p>
       <h1>FarangBuddy</h1>
-      <p class="lede">แอปนับวันพำนักในประเทศไทย บอกแอปว่าคุณเข้าเมืองวันไหน ออกวันไหน วิ่งชายแดนหรือต่อวีซ่าเมื่อไร แล้วแอปจะเก็บวันที่สำคัญไว้ตรงหน้าคุณ</p>
+      <p class="lede">แอปนับวันพำนักในประเทศไทย กรอกว่าคุณเข้าเมืองวันไหน ออกวันไหน วิ่งชายแดนวันไหน และต่อวีซ่าวันไหน แล้วแอปจะแสดงวันที่คุณต้องระวัง</p>
       <div class="cta-row">
         <a class="btn accent" href="https://farangbuddy.netlify.app/" rel="noopener">เปิดแอป</a>
         <a class="btn ghost" href="#install">วิธีติดตั้ง</a>
@@ -92,12 +92,12 @@
   <div class="wrap">
     <div class="section-head rise">
       <h2>แอปดูอะไรให้บ้าง</h2>
-      <p>มีรายการเดียวว่าเกิดอะไรขึ้นบ้าง ที่เหลือแอปคำนวณจากรายการนั้น</p>
+      <p>คุณกรอกว่าเกิดอะไรขึ้น แล้วแอปคำนวณวันให้จากตรงนั้น</p>
     </div>
     <div class="grid">
       <article class="card rise">
         <h3>วันที่อนุญาตให้อยู่ถึง</h3>
-        <p>ใช้วันจากตราประทับจริง ไม่ใช่การเดา และแอปมีคำอธิบายว่าจะอ่านวันไหนจากตราประทับ ถ้าคุณไม่แน่ใจ</p>
+        <p>ใช้วันจากตราประทับจริง ไม่ใช่การเดา ถ้าไม่แน่ใจว่าต้องดูวันไหน แอปมีคำอธิบายวิธีอ่านตราประทับ</p>
       </article>
       <article class="card rise">
         <h3>วันเข้า วันออก และวิ่งชายแดน</h3>
@@ -105,7 +105,7 @@
       </article>
       <article class="card rise">
         <h3>รายงานตัว 90 วัน และ ตม.30</h3>
-        <p>ทั้งสองวันอยู่บนหน้าสถานะรวมกับเรื่องอื่น จะได้ไม่ใช่เรื่องที่ลืม</p>
+        <p>ทั้งสองวันแสดงอยู่บนหน้าสถานะรวมกับเรื่องอื่น คุณจะได้ไม่ลืม</p>
       </article>
       <article class="card rise">
         <h3>ดูให้ได้มากกว่าหนึ่งคน</h3>
@@ -113,7 +113,7 @@
       </article>
       <article class="card rise">
         <h3>แปลงสกุลเงิน</h3>
-        <p>สำหรับตอนที่เอกสารขอตัวเลขเป็นเงินบาท แต่ธนาคารของคุณคิดเป็นสกุลอื่น</p>
+        <p>สำหรับตอนที่แบบฟอร์มขอจำนวนเงินเป็นบาท แต่ธนาคารของคุณใช้สกุลเงินอื่น</p>
       </article>
       <article class="card rise">
         <h3>ข้อมูลเป็นของคุณ</h3>
@@ -132,13 +132,14 @@
     <div class="panel rise">
       <div class="qr">
         <img src="../../assets/farang-buddy-qr.png" alt="คิวอาร์โค้ดสำหรับเปิด FarangBuddy" width="124" height="124">
-        <p>ส่องด้วยกล้องมือถือ แล้วในเบราว์เซอร์ที่เปิดขึ้นมา</p>
+        <p>สแกนด้วยกล้องมือถือ แล้วในเบราว์เซอร์ที่เปิดขึ้นมา</p>
       </div>
       <ol class="steps-tight">
         <li><strong>iPhone:</strong> กดปุ่มแชร์ แล้วเลือก <em>Add to Home Screen</em></li>
         <li><strong>Android:</strong> กดเมนูสามจุด แล้วเลือก <em>ติดตั้งแอป</em> หรือ <em>เพิ่มลงในหน้าจอหลัก</em></li>
         <li><strong>คอมพิวเตอร์:</strong> กดไอคอนติดตั้งในแถบที่อยู่เว็บ</li>
       </ol>
+      <div data-line-panel style="margin-top:1.8rem"></div>
       <p class="hint" style="margin-top:1.4rem">หรือเปิด <a href="https://farangbuddy.netlify.app/" rel="noopener">farangbuddy.netlify.app</a> ได้โดยตรง</p>
     </div>
   </div>
@@ -148,7 +149,7 @@
   <div class="wrap">
     <div class="panel rise">
       <h2 style="font-size:clamp(1.5rem,2.2vw,2rem)">เป็นตัวช่วยเตือน ไม่ใช่หลักฐาน</h2>
-      <p style="margin-top:.8rem;color:var(--ink-2);max-width:56ch">แอปคำนวณวันจากสิ่งที่คุณกรอกเข้าไป ตราประทับในพาสปอร์ตและเจ้าหน้าที่ตรงหน้าคือสิ่งที่ถูกต้อง ไม่ใช่แอป ใช้แอปเพื่อเห็นวันที่กำลังจะมาถึง แล้วใช้เราเพื่อจัดการมัน</p>
+      <p style="margin-top:.8rem;color:var(--ink-2);max-width:56ch">แอปคำนวณวันจากสิ่งที่คุณกรอกเข้าไป ถ้าแอปกับตราประทับในพาสปอร์ตไม่ตรงกัน ให้ยึดตราประทับ เจ้าหน้าที่ตรงหน้าก็เช่นกัน ใช้แอปเพื่อเห็นวันที่กำลังจะมาถึง แล้วให้เราจัดการต่อ</p>
       <div class="share" style="margin-top:1.4rem">
         <a class="btn accent" href="../index.html#quote">ขอใบเสนอราคา</a>
         <a class="btn ghost" href="../index.html#services">ดูบริการทั้งหมด</a>
@@ -170,6 +171,7 @@
       <a href="../index.html#services">บริการ</a>
       <a href="../us-visas/index.html">วีซ่าอเมริกา</a>
       <a href="../partners/index.html">พันธมิตร</a>
+      <a href="../white-label/index.html">สิทธิ์ใช้งาน</a>
       <a href="../../farang-buddy/index.html" hreflang="en">English</a>
     </nav>
   </div>

@@ -85,6 +85,20 @@ The app states its own limit and the desk repeats it: the app estimates dates
 from what the user types, and the passport stamp and the officer are correct
 over the app.
 
+## Licensing — a copy of this site for another city
+
+The site is licensed to agencies in other provinces: Ubon, Koh Samui, Phuket,
+Udon and elsewhere. A licensed copy carries the licensee's own name, city,
+domain, LINE account and partner codes, in both languages, with its own
+enquiry backend and monthly totals. Terms and a written price at
+/white-label/. Every licensed copy keeps a one-line build credit naming
+hongdam.net, who built it.
+
+## Contact on LINE
+
+LINE is the main channel. The desk's LINE Official Account is @964yxgnk, and
+every page carries an add-friend button and a QR code for it.
+
 ## Languages
 
 Every page exists in English and Thai, linked by hreflang. English is at the
@@ -96,7 +110,9 @@ root; Thai is under /th/.
 - [US visas](https://chiangmaivisadesk.com/us-visas/): 31 categories a Thai passport can apply for
 - [FarangBuddy](https://chiangmaivisadesk.com/farang-buddy/): the free stay tracker, and how to install it
 - [Partners](https://chiangmaivisadesk.com/partners/): referral programme and application
+- [Licensing](https://chiangmaivisadesk.com/white-label/): a copy of this site for another province
 - [หน้าแรก](https://chiangmaivisadesk.com/th/): the same home page in Thai
 - [วีซ่าอเมริกา](https://chiangmaivisadesk.com/th/us-visas/): the US categories in Thai
 - [FarangBuddy](https://chiangmaivisadesk.com/th/farang-buddy/): the free app, in Thai
 - [พันธมิตร](https://chiangmaivisadesk.com/th/partners/): the referral programme in Thai
+- [สิทธิ์ใช้งาน](https://chiangmaivisadesk.com/th/white-label/): licensing, in Thai

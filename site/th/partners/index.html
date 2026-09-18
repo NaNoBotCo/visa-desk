@@ -65,7 +65,7 @@
   <div class="wrap">
     <p class="eyebrow"><span class="dot"></span> โครงการแนะนำลูกค้า</p>
     <h1>คนของคุณถามคุณเรื่องวีซ่าอยู่แล้ว</h1>
-    <p class="lede">เกสต์เฮาส์ โคเวิร์กกิ้ง โรงเรียนสอนภาษา สำนักงานคอนโด แอดมินกลุ่ม ให้ลิงก์เขาไป แทนที่จะให้ความเห็น</p>
+    <p class="lede">เกสต์เฮาส์ โคเวิร์กกิ้ง โรงเรียนสอนภาษา สำนักงานคอนโด และแอดมินกลุ่ม ส่งลิงก์ให้เขา แทนที่จะให้คำแนะนำเอง</p>
     <div class="cta-row"><a class="btn accent" href="#apply">ขอรหัส</a></div>
   </div>
 </section>
@@ -75,15 +75,15 @@
     <div class="steps">
       <div class="step rise">
         <h3>คุณได้รหัส</h3>
-        <p>คำสั้น ๆ ที่เป็นของคุณ อยู่ในลิงก์ ในสติกเกอร์ QR สำหรับวางที่เคาน์เตอร์ และในข้อความที่วางลงกลุ่มได้เลย</p>
+        <p>คำสั้น ๆ ที่เป็นของคุณ อยู่ในลิงก์ อยู่บนสติกเกอร์ QR สำหรับวางที่เคาน์เตอร์ และอยู่ในข้อความที่วางลงกลุ่มได้</p>
       </div>
       <div class="step rise">
         <h3>รหัสติดไปด้วย</h3>
-        <p>ใครก็ตามที่เข้ามาทางลิงก์ของคุณ จะพารหัสนั้นผ่านแบบฟอร์มไปจนถึงการจอง เป็นเวลาเก้าสิบวัน</p>
+        <p>ใครที่เข้ามาทางลิงก์ของคุณ จะถือรหัสนั้นไว้ 90 วัน ผ่านแบบฟอร์มไปจนถึงการจอง</p>
       </div>
       <div class="step rise">
         <h3>คุณได้ส่วนแบ่ง</h3>
-        <p>งานทุกงานใต้รหัสของคุณจะมีรายการ วันที่ ประเภทงาน และส่วนแบ่งของคุณ อัตราตกลงกันเป็นลายลักษณ์อักษร</p>
+        <p>งานแต่ละงานใต้รหัสของคุณจะมีรายการ วันที่ ประเภทงาน และส่วนแบ่งของคุณ เราตกลงอัตรากับคุณเป็นลายลักษณ์อักษร</p>
       </div>
     </div>
   </div>
@@ -93,7 +93,7 @@
   <div class="wrap">
     <div class="section-head rise">
       <h2>ขอรหัส</h2>
-      <p>บอกเราว่าคุณคือใคร และคุณเจอใครบ้าง แล้วเราจะกลับไปพร้อมรหัส ลิงก์ และเงื่อนไข</p>
+      <p>เล่าเรื่องธุรกิจของคุณมา แล้วคุณจะได้รหัส ลิงก์ และเงื่อนไข</p>
     </div>
     <form class="panel" id="quoteform" novalidate>
       <div class="fields">
@@ -132,6 +132,8 @@
       </div>
       <input type="hidden" name="visa" value="partner-application">
       <input type="hidden" name="origin" id="f-origin">
+      <input type="hidden" name="line" id="f-line">
+      <input type="hidden" name="licence" id="f-licence">
       <input type="hidden" name="ref" id="f-ref">
       <input type="hidden" name="page" id="f-page">
       <input type="hidden" name="landing" id="f-landing">
@@ -141,6 +143,7 @@
       </div>
       <noscript><p class="hint" style="margin-top:1rem">เบราว์เซอร์ของคุณปิดสคริปต์อยู่ ส่งรายละเอียดเดียวกันมาที่ <a href="mailto:hello@chiangmaivisadesk.com">hello@chiangmaivisadesk.com</a></p></noscript>
     </form>
+    <div data-line-panel style="margin-top:1.6rem"></div>
   </div>
 </section>
 
@@ -149,11 +152,9 @@
     <div class="panel rise">
       <h2 style="font-size:clamp(1.5rem,2.2vw,2rem)">มีรหัสอยู่แล้ว</h2>
       <p style="margin-top:.8rem;color:var(--ink-2);max-width:52ch">เปิดเว็บด้วย <code>?ref=</code> ตามด้วยรหัสของคุณ ลิงก์ด้านล่างคือลิงก์ที่เอาไปแจกได้เลย</p>
-      <div class="share">
-        <button class="btn" type="button" id="sharebtn">แชร์หน้านี้</button>
-        <button class="btn ghost" type="button" id="copybtn">คัดลอกลิงก์</button>
-      </div>
+      <div class="share" data-share="sheet"></div>
       <p class="linkbox" id="sharelink"></p>
+      <div data-share-qr></div>
     </div>
   </div>
 </section>
@@ -172,6 +173,7 @@
       <a href="../us-visas/index.html">วีซ่าอเมริกา</a>
       <a href="../farang-buddy/index.html">แอปฟรี</a>
       <a href="../index.html#quote">ขอใบเสนอราคา</a>
+      <a href="../white-label/index.html">สิทธิ์ใช้งาน</a>
       <a href="../../partners/index.html" hreflang="en">English</a>
     </nav>
   </div>

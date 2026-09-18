@@ -1,4 +1,4 @@
-.PHONY: dev check brand codes visas ledger deploy
+.PHONY: dev check brand codes visas ledger licence deploy
 
 PORT ?= 4173
 
@@ -20,6 +20,9 @@ visas:
 
 ledger:
 	@python3 tools/ledger.py
+
+licence:
+	@python3 tools/licence.py
 
 deploy:
 	@./deploy.sh

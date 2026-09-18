@@ -1,0 +1,8 @@
+// The site itself: static files from site/, served by Cloudflare.
+// The quote form's backend is a separate Worker in worker/.
+{
+  "name": "visa-desk",
+  "compatibility_date": "2026-09-17",
+  "assets": { "directory": "site" },
+  "observability": { "enabled": true }
+}

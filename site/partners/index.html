@@ -63,8 +63,8 @@
 <section class="hero">
   <div class="wrap">
     <p class="eyebrow"><span class="dot"></span> Referral programme</p>
-    <h1>Your people ask you about visas.</h1>
-    <p class="lede">Guesthouses, coworking floors, language schools, condo offices, group admins. Give them a link instead of an opinion.</p>
+    <h1>People ask you about visas.</h1>
+    <p class="lede">Guesthouses, coworking spaces, language schools, condo offices and group admins. Give them a link instead of advice.</p>
     <div class="cta-row"><a class="btn accent" href="#apply">Get a code</a></div>
   </div>
 </section>
@@ -74,15 +74,15 @@
     <div class="steps">
       <div class="step rise">
         <h3>You get a code</h3>
-        <p>A short word, yours. It lives in a link, a QR sticker for the desk, and a line you can paste into a group.</p>
+        <p>A short word that belongs to you. It goes in a link, on a QR sticker for your desk, and in a message you can paste into a group.</p>
       </div>
       <div class="step rise">
         <h3>The code rides along</h3>
-        <p>Anyone arriving on your link carries the code through the quote form and onto the booking, for ninety days.</p>
+        <p>Anyone who arrives through your link keeps your code for 90 days, through the form and onto the booking.</p>
       </div>
       <div class="step rise">
         <h3>You get paid</h3>
-        <p>Every booking under your code is listed with the date, the job and your share. The rate is set with you in writing.</p>
+        <p>Each booking under your code is listed with the date, the job and your share. We agree the rate with you in writing.</p>
       </div>
     </div>
   </div>
@@ -92,7 +92,7 @@
   <div class="wrap">
     <div class="section-head rise">
       <h2>Get a code</h2>
-      <p>Tell us who you are and who you see. We come back with a code, a link and the terms.</p>
+      <p>Tell us about your business. You get a code, a link and the terms.</p>
     </div>
     <form class="panel" id="quoteform" novalidate>
       <div class="fields">
@@ -131,6 +131,8 @@
       </div>
       <input type="hidden" name="visa" value="partner-application">
       <input type="hidden" name="origin" id="f-origin">
+      <input type="hidden" name="line" id="f-line">
+      <input type="hidden" name="licence" id="f-licence">
       <input type="hidden" name="ref" id="f-ref">
       <input type="hidden" name="page" id="f-page">
       <input type="hidden" name="landing" id="f-landing">
@@ -140,6 +142,7 @@
       </div>
 <noscript><p class="hint" style="margin-top:1rem">Your browser is not running scripts. Email the same details to <a href="mailto:hello@chiangmaivisadesk.com">hello@chiangmaivisadesk.com</a> and a price comes back.</p></noscript>
     </form>
+    <div data-line-panel style="margin-top:1.6rem"></div>
   </div>
 </section>
 
@@ -148,11 +151,9 @@
     <div class="panel rise">
       <h2 style="font-size:clamp(1.5rem,2.2vw,2rem)">Already have a code?</h2>
       <p style="margin-top:.8rem;color:var(--ink-2);max-width:52ch">Open the site with <code>?ref=</code> and your code. The link below is the one to hand out.</p>
-      <div class="share">
-        <button class="btn" type="button" id="sharebtn">Share this page</button>
-        <button class="btn ghost" type="button" id="copybtn">Copy link</button>
-      </div>
+      <div class="share" data-share="sheet"></div>
       <p class="linkbox" id="sharelink"></p>
+      <div data-share-qr></div>
     </div>
   </div>
 </section>
@@ -170,6 +171,7 @@
       <a href="../index.html#services">Services</a>
       <a href="../farang-buddy/index.html">Free app</a>
       <a href="../index.html#faq">Questions</a>
+      <a href="../white-label/index.html">Licensing</a>
       <a href="../index.html#quote">Get a quote</a>
     </nav>
   </div>

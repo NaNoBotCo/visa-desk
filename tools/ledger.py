@@ -6,8 +6,10 @@
 Every enquiry the Worker records carries two codes:
 
     line     which book of business it belongs to. "th" is the shared
-             Thailand-side desk; "us" is the US-outbound book, which has its
-             own recipients and its own code and is counted separately.
+             Thailand-side desk; "us" is the US-outbound book; "wl" is a
+             licensing enquiry. Each has its own recipients and its own code.
+    licence  which copy of the site sent it. Empty for this one; set for a
+             white-label deployment, and what that licence is billed from.
     origin   stamped server-side on every enquiry that came through this site.
              It does not depend on a URL parameter surviving, so it is the
              line the desk's own commission is calculated from.
@@ -91,8 +93,9 @@ def statement(rows, start, end, label):
     origin_code = cfg("originCode") or "DESK"
     origin_us = cfg("originCodeUs") or "USOUT"
 
-    th = [r for r in rows if (r.get("line") or "th") != "us"]
+    th = [r for r in rows if (r.get("line") or "th") == "th"]
     us = [r for r in rows if (r.get("line") or "th") == "us"]
+    wl = [r for r in rows if (r.get("line") or "th") == "wl"]
 
     by_origin, by_ref = {}, {}
     for r in rows:
@@ -111,17 +114,18 @@ def statement(rows, start, end, label):
     w(f"  ENQUIRIES THROUGH THIS SITE                       {len(rows):>6}")
     w("=" * 62)
     w("")
-    w("  TWO BOOKS, COUNTED APART")
+    w("  EACH BOOK, COUNTED APART")
     w("  " + "-" * 58)
     w(f"    Thailand side, shared desk    {origin_code:<12} {len(th):>6}")
     w(f"    US visas, own book            {origin_us:<12} {len(us):>6}")
+    w(f"    White-label enquiries         {'WLABEL':<12} {len(wl):>6}")
     w("")
     w("  Every one of these carries the origin stamp, set by the Worker")
     w("  rather than by the visitor's URL. They are the desk's line.")
     w("")
     w("  BY ORIGIN")
     w("  " + "-" * 58)
-    labels = {origin_code: "  shared desk", origin_us: "  own book"}
+    labels = {origin_code: "  shared desk", origin_us: "  own book", "WLABEL": "  licensing"}
     for k in sorted(by_origin, key=lambda k: -by_origin[k]):
         w(f"    {k:<20} {by_origin[k]:>6}{labels.get(k, '')}")
     w("")
@@ -136,6 +140,20 @@ def statement(rows, start, end, label):
     else:
         w("  No partner codes in this period.")
     w("")
+    by_lic = {}
+    for r in rows:
+        k = r.get("licence") or ""
+        if k:
+            by_lic[k] = by_lic.get(k, 0) + 1
+    if by_lic:
+        w("  LICENSED COPIES  (each one billable on its own licence)")
+        w("  " + "-" * 58)
+        for k in sorted(by_lic, key=lambda k: -by_lic[k]):
+            w(f"    {k:<20} {by_lic[k]:>6}")
+        w("")
+        w(f"    {'this site':<20} {len(rows) - sum(by_lic.values()):>6}")
+        w("")
+
     w("  THAILAND SIDE, BY SERVICE")
     w("  " + "-" * 58)
     need = {}
@@ -167,7 +185,7 @@ def statement(rows, start, end, label):
 
 def rows_from_somewhere():
     print("\n   Reading the table…")
-    rows = query("SELECT id, received_at, line, origin, ref, need, visa, area, page FROM enquiries")
+    rows = query("SELECT id, received_at, line, origin, ref, licence, need, visa, area, page FROM enquiries")
     if rows is not None:
         print(f"   {len(rows)} row(s) from D1.")
         return rows

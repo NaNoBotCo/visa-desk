@@ -36,53 +36,54 @@ WORDS = {
         "desc": "Document preparation for Thai nationals applying for US visas: visit, study, work, family, investment and after a refusal. Business plans, source-of-funds narratives and interview preparation, with US counsel on anything that is a filing.",
         "eyebrow": "The other direction",
         "h1": "Going to America.",
-        "lede": "Thirty-one routes a Thai passport can take to the United States. We build the file; a US immigration attorney files it.",
+        "lede": "Thirty-one kinds of US visa a Thai passport holder can apply for. We prepare your file. A US immigration attorney files it.",
         "cta": "Get a quote",
         "jump": "Jump to",
         "lane_h": "What we do, and what we don't",
         "lane": [
-            "We assemble the file: the evidence, the civil documents, the certified translations, the timeline, the affidavits.",
-            "We write the parts that are written: the business plan, the source-of-funds narrative, the job-creation and economic analysis, the personal statement.",
+            "We put the file together: the evidence, the official documents, the certified translations, the timeline and the sworn statements.",
+            "We write the parts that must be written: the business plan, where the money came from, the job and economic analysis, and your personal statement.",
             "We prepare you for the interview, in Thai or in English.",
-            "Legal advice and the filings themselves go through a US immigration attorney. We work alongside one; we are not one.",
+            "Legal advice and the filing itself are done by a US immigration attorney. We work with one. We are not one.",
         ],
         "cats": "Categories",
-        "tagnote": "Two tags, and they are ours rather than anyone's ruling: <strong>Most asked for</strong> is what people walk in with. <strong>Biggest file</strong> is where the paperwork is longest and the outcome lasts longest.",
+        "tagnote": "These two labels are our own opinion, not an official decision. <strong>Most asked for</strong> means people ask us for it often. <strong>Biggest file</strong> means the paperwork is long and the result lasts a long time.",
         "nav": [("../", "Thailand services"), ("./", "US visas"), ("../farang-buddy/", "Free app"), ("../partners/", "Partners")],
         "quote_h": "Start a case",
-        "quote_p": "Or describe the situation and we name the category for you.",
+        "quote_p": "If you are not sure which one, describe your situation and we tell you.",
         "other": ("ภาษาไทย", "../th/us-visas/"),
+        "wl": ("Licensing", "../white-label/"),
         "foot": "US visa document preparation. Chiang Mai, Thailand.",
         "run_h": "How a case runs",
-        "run_p": "Seven steps. The long one is the fourth.",
+        "run_p": "",
         "run": [
-            ("Intake", "What you want, who is on your side in the United States, what has already been tried. An hour, in Thai or English."),
-            ("The category", "We name the one that fits, and say plainly where a second one would be the better bet."),
-            ("The evidence plan", "A list, in order, of every document and who issues it. Most of a refused case is a document nobody asked for in time."),
-            ("The written work", "The parts that are written rather than collected. This is where a file is won."),
-            ("Attorney review", "A US immigration attorney reviews and files. We hand over a file built to be read, not a box."),
-            ("Interview preparation", "The questions, in the order they come, in the language you will answer in."),
-            ("After", "The approval, the refusal, or the request for more evidence — each has a next move, and we say which."),
+            ("Intake", "What you want, who is helping you in the United States, and what you have already tried. About one hour, in Thai or English."),
+            ("The category", "We tell you which visa fits you, and say clearly if a different one would be better."),
+            ("The evidence plan", "A list, in order, of every document you need and who issues it. Many refusals happen because one document was asked for too late."),
+            ("The written work", "The parts somebody has to write, not collect. This is the part that decides most cases."),
+            ("Attorney review", "A US immigration attorney checks the file and submits it. We hand over a file that is ordered and easy to read."),
+            ("Interview preparation", "We practise the questions, in the order they are asked, in the language you will answer in."),
+            ("After", "Approved, refused, or asked for more evidence. Each one has a next step, and we tell you what it is."),
         ],
         "write_h": "The written work",
-        "write_p": "Collecting documents is the visible half. These are the parts somebody has to write, and the ones an adjudicator reads closely.",
+        "write_p": "Collecting documents is only half the work. These are the parts somebody has to write, and the officer reads them closely.",
         "write": [
-            ("Business plan", "Written to the standard a case is actually judged against — market, structure, capital, and a hiring schedule that survives contact with the numbers."),
-            ("Source-of-funds narrative", "Where every baht came from, traced to an origin a stranger can verify, with the paper behind each hop."),
+            ("Business plan", "Written to the standard these cases are judged by: the market, the company structure, the money, and a hiring plan the numbers support."),
+            ("Source-of-funds narrative", "Where every baht came from, traced back to a source someone else can check, with a document for each step."),
             ("Job-creation and economic analysis", "What the investment does in the local economy, in the form the adjudicator expects to see it."),
-            ("Personal statement and timeline", "The story of the relationship, the career or the work, told once, consistently, with the evidence keyed to it."),
-            ("Certified translation", "Thai civil documents into English, certified, and matched to the names as they appear on the passport."),
-            ("Response to a request for evidence", "What was actually asked for, answered in the order it was asked."),
+            ("Personal statement and timeline", "The story of your relationship, career or work, told once and the same way throughout, with the evidence matched to it."),
+            ("Certified translation", "Thai official documents into English, certified, with names spelled the same way as in your passport."),
+            ("Response to a request for evidence", "We answer exactly what was asked, in the order it was asked."),
         ],
-        "sep": "This is a separate book of business from the Thailand-side services on this site. Enquiries from this page go to the US desk, and nowhere else.",
+        "sep": "This is a separate business from the Thailand services on this site. Messages sent from this page go only to the US team.",
         "faq_h": "Questions",
         "faq": [
             ("Are you attorneys?", "No, and we say so on every page. The desk assembles the file and writes the written pieces. A US immigration attorney gives the legal advice and does the filing. If someone tells you a non-attorney can do that part, walk away from them."),
-            ("I was refused before. Is that the end of it?", "No. It is a starting condition. What matters is what has changed since, written down and evidenced, before you pay the fee again. That is its own piece of work and we quote it separately."),
+            ("I was refused before. Is that the end of it?", "No. What matters is what has changed since then, written down with evidence, before you pay the fee again. That is a separate piece of work and we price it separately."),
             ("Do you guarantee an outcome?", "Nobody can, and anyone who does is selling you something. The consulate decides. What we control is whether the file makes the case it should."),
-            ("How long does it take?", "It depends on the category and on what the consulate is doing that season. We do not publish timelines here because a published timeline is out of date by the time it is read; the quote gives you the current picture for your case."),
-            ("Can you work from Chiang Mai if I am somewhere else?", "Yes. Most of a case is documents and calls. The interview is the part that needs you in person, and preparation for it happens beforehand."),
-            ("What does it cost?", "Quoted per case, in writing, before anything starts. The written work is priced separately from the assembly because they are different amounts of work."),
+            ("How long does it take?", "It depends on the visa type and on how busy the consulate is. We do not publish times on this page, because a published time is out of date very quickly. Your written price tells you the current situation for your case."),
+            ("Can you work from Chiang Mai if I am somewhere else?", "Yes. Most of the work is documents and phone calls. Only the interview needs you there in person, and we prepare you for it before that."),
+            ("What does it cost?", "We give a written price for each case before any work starts. The writing is priced separately from collecting the documents, because they are different amounts of work."),
         ],
         "f_name": "Name", "f_contact": "Email, LINE or WhatsApp",
         "f_cat": "Which category", "f_cat_unsure": "Not sure — tell me",
@@ -102,7 +103,7 @@ WORDS = {
         "desc": "บริการจัดเตรียมเอกสารวีซ่าสหรัฐอเมริกาสำหรับคนไทย: ท่องเที่ยว เรียน ทำงาน ครอบครัว ลงทุน และกรณีเคยถูกปฏิเสธ แผนธุรกิจ ที่มาของเงินทุน และการเตรียมสัมภาษณ์ โดยมีทนายความสหรัฐรับผิดชอบการยื่น",
         "eyebrow": "อีกทางหนึ่ง",
         "h1": "ไปอเมริกา",
-        "lede": "สามสิบเอ็ดเส้นทางที่พาสปอร์ตไทยไปสหรัฐอเมริกาได้ เราจัดแฟ้มให้ ทนายความด้านตรวจคนเข้าเมืองของสหรัฐเป็นผู้ยื่น",
+        "lede": "วีซ่าสหรัฐ 31 ประเภทที่คนถือพาสปอร์ตไทยยื่นได้ เราเตรียมแฟ้มให้คุณ ทนายความด้านตรวจคนเข้าเมืองของสหรัฐเป็นผู้ยื่น",
         "cta": "ขอใบเสนอราคา",
         "jump": "ข้ามไปที่",
         "lane_h": "เราทำอะไร และไม่ทำอะไร",
@@ -113,14 +114,15 @@ WORDS = {
             "การให้คำปรึกษาทางกฎหมายและการยื่นเรื่อง เป็นหน้าที่ของทนายความด้านตรวจคนเข้าเมืองของสหรัฐ เราทำงานร่วมกับทนาย แต่เราไม่ใช่ทนาย",
         ],
         "cats": "ประเภทวีซ่า",
-        "tagnote": "ป้ายสองแบบนี้เป็นมุมมองของเราเอง ไม่ใช่คำวินิจฉัยของใคร: <strong>ถามมากที่สุด</strong> คือสิ่งที่คนเดินเข้ามาถามจริง <strong>งานเอกสารใหญ่ที่สุด</strong> คือเรื่องที่เอกสารยาวที่สุดและผลลัพธ์อยู่ยาวที่สุด",
+        "tagnote": "ป้ายสองแบบนี้เป็นความเห็นของเราเอง ไม่ใช่คำวินิจฉัยทางการ <strong>ถามมากที่สุด</strong> หมายถึงมีคนถามเราบ่อย <strong>งานเอกสารใหญ่ที่สุด</strong> หมายถึงเอกสารเยอะ และผลลัพธ์อยู่ได้นาน",
         "nav": [("../", "บริการในไทย"), ("./", "วีซ่าอเมริกา"), ("../farang-buddy/", "แอปฟรี"), ("../partners/", "พันธมิตร")],
         "quote_h": "เริ่มเรื่องของคุณ",
-        "quote_p": "หรือเล่าสถานการณ์มา แล้วเราจะบอกเองว่าเข้าข่ายประเภทใด",
+        "quote_p": "ถ้าไม่แน่ใจว่าประเภทไหน เล่าสถานการณ์มา แล้วเราจะบอกให้",
         "other": ("English", "../../us-visas/"),
+        "wl": ("สิทธิ์ใช้งาน", "../white-label/"),
         "foot": "บริการจัดเตรียมเอกสารวีซ่าสหรัฐ จังหวัดเชียงใหม่",
         "run_h": "เรื่องหนึ่งเดินอย่างไร",
-        "run_p": "เจ็ดขั้น ขั้นที่ยาวที่สุดคือขั้นที่สี่",
+        "run_p": "",
         "run": [
             ("รับเรื่อง", "คุณต้องการอะไร ใครอยู่ฝั่งสหรัฐให้คุณ และเคยลองอะไรมาแล้ว ใช้เวลาราวหนึ่งชั่วโมง ภาษาไทยหรืออังกฤษก็ได้"),
             ("เลือกประเภท", "เราบอกว่าประเภทไหนตรงกับคุณ และบอกตรง ๆ ถ้าอีกประเภทหนึ่งน่าจะดีกว่า"),
@@ -131,7 +133,7 @@ WORDS = {
             ("หลังจากนั้น", "อนุมัติ ปฏิเสธ หรือขอหลักฐานเพิ่ม แต่ละทางมีหมากถัดไป และเราบอกว่าเป็นหมากไหน"),
         ],
         "write_h": "งานเขียน",
-        "write_p": "การรวบรวมเอกสารคือครึ่งที่มองเห็น ส่วนด้านล่างนี้คือสิ่งที่ต้องมีคนเขียน และเป็นส่วนที่เจ้าหน้าที่อ่านอย่างละเอียด",
+        "write_p": "การรวบรวมเอกสารเป็นแค่ครึ่งเดียวของงาน ส่วนด้านล่างนี้คือสิ่งที่ต้องมีคนเขียน และเจ้าหน้าที่อ่านอย่างละเอียด",
         "write": [
             ("แผนธุรกิจ", "เขียนตามมาตรฐานที่ใช้พิจารณาจริง ทั้งตลาด โครงสร้าง เงินทุน และแผนการจ้างงานที่ตัวเลขรองรับได้"),
             ("ที่มาของเงินทุน", "ทุกบาทมาจากไหน สาวถึงต้นทางที่คนนอกตรวจสอบได้ พร้อมเอกสารทุกทอด"),
@@ -140,7 +142,7 @@ WORDS = {
             ("คำแปลรับรอง", "เอกสารราชการไทยเป็นภาษาอังกฤษ พร้อมรับรอง และสะกดชื่อให้ตรงกับพาสปอร์ต"),
             ("การตอบหนังสือขอหลักฐานเพิ่ม", "ตอบสิ่งที่เขาถามจริง ตามลำดับที่เขาถาม"),
         ],
-        "sep": "ส่วนนี้แยกจากบริการฝั่งประเทศไทยในเว็บเดียวกัน เรื่องที่ส่งจากหน้านี้ไปที่ทีมวีซ่าอเมริกาเท่านั้น",
+        "sep": "ส่วนนี้เป็นคนละธุรกิจกับบริการฝั่งประเทศไทยในเว็บเดียวกัน ข้อความที่ส่งจากหน้านี้ไปถึงทีมวีซ่าอเมริกาเท่านั้น",
         "faq_h": "คำถามที่พบบ่อย",
         "faq": [
             ("คุณเป็นทนายความหรือเปล่า", "ไม่ใช่ และเราบอกไว้ทุกหน้า เราจัดแฟ้มและเขียนส่วนที่ต้องเขียน ส่วนคำปรึกษาทางกฎหมายและการยื่นเป็นของทนายความสหรัฐ ถ้าใครบอกคุณว่าคนที่ไม่ใช่ทนายทำส่วนนั้นได้ ให้เดินออกมา"),
@@ -393,7 +395,7 @@ def render(lang, data):
   <div class="wrap">
     <div class="section-head rise">
       <h2>{esc(w["run_h"])}</h2>
-      <p>{esc(w["run_p"])}</p>
+      {'<p>' + esc(w["run_p"]) + '</p>' if w["run_p"] else ''}
     </div>
     <div class="steps">
 {run}
@@ -485,6 +487,7 @@ def render(lang, data):
 
       <input type="hidden" name="origin" id="f-origin">
       <input type="hidden" name="line" id="f-line">
+      <input type="hidden" name="licence" id="f-licence">
       <input type="hidden" name="ref" id="f-ref">
       <input type="hidden" name="page" id="f-page">
       <input type="hidden" name="landing" id="f-landing">
@@ -495,6 +498,8 @@ def render(lang, data):
       </div>
       <noscript><p class="hint" style="margin-top:1rem">{esc(w["f_noscript_a"])}<a href="mailto:{INBOX}">{INBOX}</a>{esc(w["f_noscript_b"])}</p></noscript>
     </form>
+
+    <div data-line-panel style="margin-top:1.8rem"></div>
 
     <p class="hint" style="margin-top:1.4rem;max-width:62ch">{esc(w["sep"])}</p>
   </div>
@@ -510,6 +515,7 @@ def render(lang, data):
     </div>
     <nav>
 {nav}
+      <a href="{w["wl"][1]}">{esc(w["wl"][0])}</a>
       <a href="{w["other"][1]}" hreflang="{other_lang}">{esc(w["other"][0])}</a>
     </nav>
   </div>

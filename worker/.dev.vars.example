@@ -5,4 +5,5 @@
 # is not, and it has no fallback to the shared list.
 DESK_RECIPIENTS="shared@example.com,partner@example.com"
 US_RECIPIENTS="you@example.com"
+WL_RECIPIENTS="you@example.com"
 RESEND_KEY="re_xxxxxxxxxxxxxxxxxxxx"

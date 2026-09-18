@@ -19,3 +19,11 @@ worker/.dev.vars
 
 # Generated commission statements.
 statements/
+
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+
+# White-label register: real licensees.
+licences-private/

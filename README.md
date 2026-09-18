@@ -40,6 +40,15 @@ for your own city in about a minute.
   without JavaScript.
 - **A free app to give away.** A page built to hand someone a QR code and three
   install lines, so the thing on their home screen is yours.
+- **LINE, not as an afterthought.** An add-friend button in every header, a
+  panel with a scannable QR beside every form, LINE first in the share sheet,
+  and the whole lot disappears cleanly if you leave the account id empty.
+- **A share sheet worth tapping.** Native share where the browser has it, then
+  LINE, WhatsApp, Facebook, Telegram, X, email and copy — every one of them
+  carrying the referral code, plus a QR for handing a phone across a counter.
+- **A white-label licence that bills itself.** A licensed copy carries a
+  licence id that rides on every enquiry it sends, so a deployment is counted
+  whether or not anyone raises the invoice.
 - **A rebrand command**, because the whole point of a clone is that it stops
   being ours.
 - **Checks that fail on the mistakes a clone actually makes** — a half-swapped
@@ -83,12 +92,18 @@ still stamped. This is the line your own commission is calculated from.
 rather than replacing it. A guesthouse's share comes out of yours; it never
 takes your line away.
 
-**Two books, one website.** Pages carry a `line`. `th` is the shared
-Thailand-side desk; `us` is a separate book with its own origin code, its own
-recipient list and no fallback to the shared one. A form declares which it
-belongs to with `data-line`, the Worker decides the stamp and the routing from
-that, and `make ledger` counts the two apart. Delete the `us` pages and the
-second book disappears without touching the first.
+**Separate books, one website.** Pages carry a `line`: `th` for the shared
+desk, `us` for the US-outbound work, `wl` for licensing enquiries. Each has its
+own origin code and its own recipient list, and the two private ones have no
+fallback to the shared list — an unset secret means the mail does not go,
+rather than going to the wrong people. A form declares which book it belongs to
+with `data-line`; the Worker decides the stamp and the routing from that, and
+`make ledger` counts them apart.
+
+**A licensed copy is counted too.** Fill in `config.js → licence` and that id
+travels with every enquiry that copy sends, into the `enquiries` table and the
+notification subject line. `make licence` mints one and writes the setup notes
+for the clone.
 
 ```
 https://your-domain.com/?ref=PUNSPACE     →  origin=CMVD  ref=PUNSPACE
@@ -153,6 +168,7 @@ wrangler deploy
 | `make visas` | rebuild the visa catalogue pages from `data/us-visas.json` |
 | `make codes` | partner code menu |
 | `make ledger` | commission statement for a period |
+| `make licence` | mint a licence for a white-label copy |
 | `make deploy` | Cloudflare Pages |
 
 ## Checks
@@ -188,7 +204,8 @@ site/
   us-visas/             the visa catalogue          (generated)
   farang-buddy/         the free app, and how to install it
   partners/             referral programme and application
-  th/                   all four of the above, in Thai
+  white-label/          licensing a copy for another city
+  th/                   all five of the above, in Thai
   assets/config.js      name, domain, inbox, handles, referral settings
   assets/style.css      tokens, light and dark, motion gated
   assets/app.js         token capture, form, share
@@ -200,7 +217,8 @@ tools/
   brand.py              set the name and domain, redraw the card
   codes.py              mint partner codes, QR and stickers
   build_visas.py        render the catalogue into both languages
-  ledger.py             commission statement by origin and partner code
+  ledger.py             statement by book, licence and partner code
+  licence.py            mint a licence for a white-label copy
   check.py              the checks
 worker/
   src/index.js          POST /quote → D1 → mail to everyone on the desk

@@ -273,3 +273,35 @@ html[lang="th"] h1,html[lang="th"] h2,html[lang="th"] h3{font-family:inherit;fon
   letter-spacing:.06em;text-transform:uppercase;padding:.3rem .7rem;border-radius:999px;
   background:color-mix(in srgb,var(--jade) 15%,transparent);color:var(--jade)}
 @media (prefers-color-scheme:dark){.free{background:#1b2f28;color:#7fc6ac}}
+
+/* ------------------------------------------------------------------ LINE */
+:root{--line-green:#06C755;--line-green-ink:#04a445}
+.btn.line{background:var(--line-green);color:#fff}
+.btn.line:hover{background:var(--line-green-ink)}
+.sico{width:1.05em;height:1.05em;flex:none;display:inline-block;vertical-align:-.15em}
+.linebtn{padding:.7rem 1rem}
+@media (max-width:760px){.linebtn span{display:none}}
+.linelink{color:var(--line-green-ink);font-weight:600;text-decoration:none}
+.linelink:hover{text-decoration:underline}
+@media (prefers-color-scheme:dark){.linelink{color:#3fd67f}}
+
+.linepanel{display:flex;gap:clamp(1.2rem,3vw,2.2rem);align-items:center;flex-wrap:wrap;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(1.4rem,3vw,2.2rem);box-shadow:var(--shadow)}
+.linepanel > div{flex:1 1 20rem}
+.linepanel h3{display:flex;align-items:center;gap:.5rem;font-size:1.25rem;color:var(--line-green-ink)}
+@media (prefers-color-scheme:dark){.linepanel h3{color:#3fd67f}}
+.linepanel p{margin:.7rem 0 1.2rem;color:var(--ink-2);max-width:44ch}
+.lineqr{width:132px;height:132px;border-radius:14px;background:#fff;padding:8px;
+  border:1px solid var(--line);flex:none}
+
+/* --------------------------------------------------------------- share sheet */
+.share{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1.6rem}
+.sbtn{gap:.45rem}
+.sbtn.line{background:var(--line-green);color:#fff;box-shadow:none}
+.sbtn.line:hover{background:var(--line-green-ink);color:#fff}
+
+/* ------------------------------------------------------------------ credit */
+.credit{margin-top:.6rem;font-size:.85rem;color:var(--ink-3)}
+.credit a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+.credit a:hover{color:var(--ink);border-bottom-color:var(--marigold)}

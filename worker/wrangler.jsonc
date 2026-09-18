@@ -3,16 +3,20 @@
   "main": "src/index.js",
   "compatibility_date": "2026-09-01",
   "vars": {
-    "SITE_ORIGIN": "https://chiangmaivisadesk.com",
+    "SITE_ORIGIN": "https://chiangmaivisadesk.com,https://www.chiangmaivisadesk.com,https://visa-desk.nanobotco.workers.dev",
     "ORIGIN_CODE": "CMVD",
     "ORIGIN_CODE_US": "USOUT",
-    "MAIL_FROM": "desk@chiangmaivisadesk.com"
+    "ORIGIN_CODE_WL": "WLABEL",
+    // Notifications are internal, so they send from an already-verified
+    // Resend domain. Move this to the desk's own domain once it is added to
+    // Resend and its DKIM records are live.
+    "MAIL_FROM": "Visa Desk <listings@send.motdang.net>"
     // DESK_RECIPIENTS and US_RECIPIENTS are secrets, not vars — the addresses
     // stay out of this repository, and the two lists are separate on purpose.
     //   wrangler secret put DESK_RECIPIENTS
     //   wrangler secret put US_RECIPIENTS
   },
   "d1_databases": [
-    { "binding": "DB", "database_name": "visa-desk", "database_id": "PUT-THE-D1-ID-HERE" }
+    { "binding": "DB", "database_name": "visa-desk", "database_id": "d2a50849-fa2f-4f4a-be1e-b5a884fc98a0" }
   ]
 }
