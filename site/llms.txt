@@ -1,0 +1,102 @@
+# Chiang Mai Visa Desk
+
+> Visa paperwork and escorted border runs for long-stay residents of Chiang Mai
+> and northern Thailand. A Thai-registered company. English-first, Thai spoken.
+> Quotes by email or message; each job priced for the person, the visa and the date.
+
+## What it does
+
+- **Border runs** — door pickup in Chiang Mai, paperwork prepared in advance,
+  staff at both counters, return the same trip. Private or shared van.
+- **Extensions** — forms, photos, copies and signatures checked, then filed at
+  Chiang Mai Immigration with the client or on their behalf.
+- **90-day reporting** — date tracked, report prepared and lodged, receipt and
+  next due date returned.
+- **TM30 / address notification** — filed on a move and on return from travel.
+- **Re-entry permits** — single or multiple, at the immigration office or the
+  airport desk.
+- **Documents** — bank letters, lease copies, translation, certification,
+  embassy paperwork.
+
+## Who it serves
+
+DTV holders, retirees, and people on marriage, education, business and TR
+visas who live in or around Chiang Mai and need to leave and re-enter
+periodically. Couples, housemates and coworking floors can book as one group.
+
+## What it does not do
+
+It does not publish immigration rules. Requirements change; the current
+requirement for a given visa type and travel date is checked per job and
+reflected in the quote. Nothing on this site should be read as a statement of
+Thai immigration law.
+
+## Pricing
+
+Quoted in writing per job, for the visa type, the dates and the pickup point.
+Pricing sits with the other Chiang Mai agencies.
+
+## Contact
+
+Quote form: https://chiangmaivisadesk.com/#quote
+Partners: https://chiangmaivisadesk.com/partners/
+
+## Referral links
+
+Any page accepts a referral code as a query parameter:
+
+    https://chiangmaivisadesk.com/?ref=CODE
+
+The code is carried through the quote form and attributed to the partner who
+issued it. Partners apply at /partners/.
+
+## The other direction — US visas for Thai nationals
+
+The desk also prepares US visa applications for Thai passport holders: visit,
+study and exchange, work, family, immigrate and invest, and cases where an
+earlier application was refused. Thirty-one categories are listed at
+/us-visas/ with what the desk prepares for each.
+
+The division of labour is fixed: the desk assembles the file, writes the
+business plan, the source-of-funds narrative and the job-creation and economic
+analysis, and prepares the applicant for the interview. Legal advice and the
+filings themselves go through a US immigration attorney. The desk works
+alongside one and is not one.
+
+Two tags appear on that page and they are the desk's own view rather than any
+ruling: "Most asked for" marks the categories people arrive with, and
+"Biggest file" marks the ones where the paperwork is longest and the outcome
+lasts longest — E-1/E-2 treaty trader and investor, EB-5, and EB-2 national
+interest waiver.
+
+## FarangBuddy — a free app
+
+FarangBuddy is a free Thailand stay tracker the desk gives away:
+https://farangbuddy.netlify.app/ — described at /farang-buddy/.
+
+It records entries, exits, border runs and extensions, works the
+admitted-until date out from that list, and keeps the 90-day reporting and
+TM30 dates on the same screen. It handles more than one person, converts
+currency, and exports its records. It runs in a browser and installs to a
+home screen, so it arrives without a store. Its records sit in the browser on
+the device.
+
+The app states its own limit and the desk repeats it: the app estimates dates
+from what the user types, and the passport stamp and the officer are correct
+over the app.
+
+## Languages
+
+Every page exists in English and Thai, linked by hreflang. English is at the
+root; Thai is under /th/.
+
+## Pages
+
+- [Home](https://chiangmaivisadesk.com/): services, how it works, questions, quote form
+- [US visas](https://chiangmaivisadesk.com/us-visas/): 31 categories a Thai passport can apply for
+- [FarangBuddy](https://chiangmaivisadesk.com/farang-buddy/): the free stay tracker, and how to install it
+- [Partners](https://chiangmaivisadesk.com/partners/): referral programme and application
+- [หน้าแรก](https://chiangmaivisadesk.com/th/): the same home page in Thai
+- [วีซ่าอเมริกา](https://chiangmaivisadesk.com/th/us-visas/): the US categories in Thai
+- [FarangBuddy](https://chiangmaivisadesk.com/th/farang-buddy/): the free app, in Thai
+- [พันธมิตร](https://chiangmaivisadesk.com/th/partners/): the referral programme in Thai

@@ -1,0 +1,146 @@
+{
+  "note": "Service lines, not law. Each entry says what the desk prepares. No entry states eligibility, a fee, a wait or an outcome — those come from the consulate and from US counsel.",
+  "tags": {
+    "asked": { "en": "Most asked for", "th": "ถามมากที่สุด" },
+    "value": { "en": "Biggest file", "th": "งานเอกสารใหญ่ที่สุด" }
+  },
+  "groups": [
+    {
+      "id": "visit",
+      "en": { "name": "Visit", "blurb": "Short stays: business, family, a holiday, a layover." },
+      "th": { "name": "ไปเยือน", "blurb": "อยู่ระยะสั้น: ธุรกิจ ครอบครัว ท่องเที่ยว หรือแวะเปลี่ยนเครื่อง" },
+      "items": [
+        { "code": "B-1", "tags": ["asked"],
+          "en": { "name": "Business visitor", "blurb": "Meetings, a conference, a trade fair, negotiating a contract." },
+          "th": { "name": "นักธุรกิจระยะสั้น", "blurb": "ประชุม งานสัมมนา งานแสดงสินค้า เจรจาสัญญา" } },
+        { "code": "B-2", "tags": ["asked"],
+          "en": { "name": "Holiday and family visit", "blurb": "A holiday, a wedding, a graduation, time with family." },
+          "th": { "name": "ท่องเที่ยวและเยี่ยมครอบครัว", "blurb": "ท่องเที่ยว งานแต่ง งานรับปริญญา ไปหาครอบครัว" } },
+        { "code": "B-1/B-2",
+          "en": { "name": "Combined", "blurb": "One file covering both reasons to travel." },
+          "th": { "name": "รวมสองประเภท", "blurb": "ยื่นครั้งเดียว ครอบคลุมทั้งธุรกิจและท่องเที่ยว" } },
+        { "code": "C-1/D",
+          "en": { "name": "Transit and crew", "blurb": "Air and sea crew, and passing through on the way elsewhere." },
+          "th": { "name": "ผ่านแดนและลูกเรือ", "blurb": "ลูกเรือสายการบินและเรือเดินทะเล และการเดินทางผ่าน" } }
+      ]
+    },
+    {
+      "id": "study",
+      "en": { "name": "Study and exchange", "blurb": "University, vocational training, and the exchange programmes." },
+      "th": { "name": "เรียนและแลกเปลี่ยน", "blurb": "มหาวิทยาลัย สายอาชีพ และโครงการแลกเปลี่ยน" },
+      "items": [
+        { "code": "F-1", "tags": ["asked"],
+          "en": { "name": "Academic student", "blurb": "Degree and language programmes. The I-20, the funding evidence, the interview." },
+          "th": { "name": "นักศึกษา", "blurb": "หลักสูตรปริญญาและภาษา เอกสาร I-20 หลักฐานทุนทรัพย์ และการสัมภาษณ์" } },
+        { "code": "M-1",
+          "en": { "name": "Vocational student", "blurb": "Trade and technical courses that are not academic degrees." },
+          "th": { "name": "นักเรียนสายอาชีพ", "blurb": "หลักสูตรวิชาชีพและเทคนิคที่ไม่ใช่ปริญญา" } },
+        { "code": "J-1", "tags": ["asked"],
+          "en": { "name": "Exchange visitor", "blurb": "Au pair, intern, trainee, camp counsellor, research scholar, teacher." },
+          "th": { "name": "ผู้เข้าร่วมโครงการแลกเปลี่ยน", "blurb": "ออแพร์ ฝึกงาน เทรนนี่ ค่ายฤดูร้อน นักวิจัย ครู" } },
+        { "code": "F-2 · M-2 · J-2",
+          "en": { "name": "Dependents", "blurb": "Spouse and children travelling with a student or exchange visitor." },
+          "th": { "name": "ผู้ติดตาม", "blurb": "คู่สมรสและบุตรที่เดินทางไปกับนักเรียนหรือผู้แลกเปลี่ยน" } }
+      ]
+    },
+    {
+      "id": "work",
+      "en": { "name": "Work", "blurb": "An employer, a transfer, a talent, or your own company." },
+      "th": { "name": "ทำงาน", "blurb": "มีนายจ้าง โอนย้ายภายในบริษัท ความสามารถพิเศษ หรือบริษัทของคุณเอง" },
+      "items": [
+        { "code": "E-1 · E-2", "tags": ["value"],
+          "en": { "name": "Treaty trader and treaty investor",
+                  "blurb": "The Thailand route we know best: the business plan, the source-of-funds narrative, the company formation and the economic case that the file stands or falls on." },
+          "th": { "name": "ผู้ค้าและผู้ลงทุนตามสนธิสัญญา",
+                  "blurb": "เส้นทางที่เราถนัดที่สุดสำหรับคนไทย: แผนธุรกิจ ที่มาของเงินทุน การจดตั้งบริษัท และการวิเคราะห์เศรษฐกิจที่ชี้ขาดแฟ้มนี้" } },
+        { "code": "H-1B",
+          "en": { "name": "Specialty occupation", "blurb": "The employer files; we assemble your side of it." },
+          "th": { "name": "อาชีพเฉพาะทาง", "blurb": "นายจ้างเป็นผู้ยื่น เราจัดเตรียมเอกสารฝั่งคุณ" } },
+        { "code": "H-2A · H-2B",
+          "en": { "name": "Seasonal work", "blurb": "Agricultural and non-agricultural seasonal jobs, when the programme is open to Thai nationals." },
+          "th": { "name": "งานตามฤดูกาล", "blurb": "งานเกษตรและงานตามฤดูกาลอื่น ในปีที่โครงการเปิดให้คนไทย" } },
+        { "code": "L-1A · L-1B",
+          "en": { "name": "Intracompany transfer", "blurb": "Moving from a Thai company to its US office, as a manager or a specialist." },
+          "th": { "name": "โอนย้ายภายในบริษัท", "blurb": "ย้ายจากบริษัทในไทยไปสำนักงานในสหรัฐ ในฐานะผู้บริหารหรือผู้เชี่ยวชาญ" } },
+        { "code": "O-1",
+          "en": { "name": "Extraordinary ability", "blurb": "Evidence of a record: press, prizes, published work, the people who will speak for you." },
+          "th": { "name": "ความสามารถพิเศษ", "blurb": "หลักฐานผลงาน: สื่อ รางวัล ผลงานตีพิมพ์ และผู้รับรอง" } },
+        { "code": "P-1 · P-2 · P-3",
+          "en": { "name": "Athletes and performers", "blurb": "Muay Thai, dance, music, and culturally unique performance." },
+          "th": { "name": "นักกีฬาและศิลปิน", "blurb": "มวยไทย นาฏศิลป์ ดนตรี และการแสดงที่มีเอกลักษณ์ทางวัฒนธรรม" } },
+        { "code": "R-1",
+          "en": { "name": "Religious worker", "blurb": "Monks, teachers and staff invited by a US temple or congregation." },
+          "th": { "name": "นักบวชและผู้ปฏิบัติศาสนกิจ", "blurb": "พระสงฆ์ ครูสอนศาสนา และเจ้าหน้าที่ที่วัดหรือองค์กรในสหรัฐนิมนต์หรือเชิญ" } },
+        { "code": "Q-1",
+          "en": { "name": "Cultural exchange", "blurb": "Sharing Thai culture through a sponsoring US programme." },
+          "th": { "name": "แลกเปลี่ยนวัฒนธรรม", "blurb": "เผยแพร่วัฒนธรรมไทยผ่านโครงการในสหรัฐที่เป็นผู้สนับสนุน" } }
+      ]
+    },
+    {
+      "id": "family",
+      "en": { "name": "Family", "blurb": "Marriage, engagement, parents and children." },
+      "th": { "name": "ครอบครัว", "blurb": "สมรส หมั้น พ่อแม่ และบุตร" },
+      "items": [
+        { "code": "K-1", "tags": ["asked"],
+          "en": { "name": "Fiancé(e)", "blurb": "The relationship evidence, the timeline, the affidavit, the interview." },
+          "th": { "name": "คู่หมั้น", "blurb": "หลักฐานความสัมพันธ์ ลำดับเหตุการณ์ คำให้การ และการสัมภาษณ์" } },
+        { "code": "CR-1 · IR-1", "tags": ["asked"],
+          "en": { "name": "Spouse", "blurb": "Married already. The petition packet, the civil documents, the translations." },
+          "th": { "name": "คู่สมรส", "blurb": "จดทะเบียนแล้ว แฟ้มคำร้อง เอกสารทะเบียนราษฎร์ และคำแปล" } },
+        { "code": "K-3",
+          "en": { "name": "Spouse, while the petition runs", "blurb": "Prepared when the timing makes it worth doing." },
+          "th": { "name": "คู่สมรส ระหว่างรอคำร้อง", "blurb": "จัดเตรียมเมื่อจังหวะเวลาคุ้มที่จะยื่น" } },
+        { "code": "IR-2 · IR-5",
+          "en": { "name": "Children and parents", "blurb": "Children under 21, and parents of a US citizen over 21." },
+          "th": { "name": "บุตรและบิดามารดา", "blurb": "บุตรอายุต่ำกว่า 21 ปี และบิดามารดาของพลเมืองสหรัฐที่อายุเกิน 21 ปี" } },
+        { "code": "F1 · F2A · F2B · F3 · F4",
+          "en": { "name": "Preference categories", "blurb": "Adult children, siblings, and the family of green card holders." },
+          "th": { "name": "ประเภทลำดับสิทธิ", "blurb": "บุตรที่บรรลุนิติภาวะ พี่น้อง และครอบครัวของผู้ถือกรีนการ์ด" } }
+      ]
+    },
+    {
+      "id": "immigrate",
+      "en": { "name": "Immigrate and invest", "blurb": "The routes that end in a green card." },
+      "th": { "name": "ย้ายถิ่นฐานและลงทุน", "blurb": "เส้นทางที่ปลายทางคือกรีนการ์ด" },
+      "items": [
+        { "code": "EB-5", "tags": ["value"],
+          "en": { "name": "Investor", "blurb": "Source-of-funds narrative, the job-creation and economic analysis, and a business plan built to the standard the adjudicator reads it against." },
+          "th": { "name": "นักลงทุน", "blurb": "ที่มาของเงินทุน การวิเคราะห์การจ้างงานและเศรษฐกิจ และแผนธุรกิจที่เขียนตามมาตรฐานที่เจ้าหน้าที่ใช้พิจารณา" } },
+        { "code": "EB-2 NIW", "tags": ["value"],
+          "en": { "name": "National interest waiver", "blurb": "The case for why your work matters enough to skip the job offer." },
+          "th": { "name": "การยกเว้นเพื่อประโยชน์แห่งชาติ", "blurb": "การสร้างเหตุผลว่างานของคุณสำคัญพอที่จะไม่ต้องมีนายจ้างรองรับ" } },
+        { "code": "EB-1",
+          "en": { "name": "Extraordinary ability, professor, executive", "blurb": "The evidence file, built the way the criteria are actually read." },
+          "th": { "name": "ความสามารถพิเศษ อาจารย์ ผู้บริหาร", "blurb": "แฟ้มหลักฐานที่จัดตามเกณฑ์ที่ใช้พิจารณาจริง" } },
+        { "code": "EB-3",
+          "en": { "name": "Skilled, professional, other worker", "blurb": "With an employer behind it, and the labour certification that comes first." },
+          "th": { "name": "แรงงานฝีมือ วิชาชีพ และอื่น ๆ", "blurb": "ต้องมีนายจ้าง และต้องผ่านการรับรองแรงงานก่อน" } },
+        { "code": "EB-4",
+          "en": { "name": "Special immigrant", "blurb": "Including religious workers with a US congregation behind them." },
+          "th": { "name": "ผู้อพยพประเภทพิเศษ", "blurb": "รวมถึงนักบวชที่มีองค์กรศาสนาในสหรัฐรองรับ" } },
+        { "code": "DV",
+          "en": { "name": "Diversity Visa lottery", "blurb": "The entry prepared and checked, in the years Thailand is on the list. Free to enter; the mistakes are what disqualify people." },
+          "th": { "name": "การจับสลากวีซ่าถาวร (DV)", "blurb": "จัดเตรียมและตรวจใบสมัคร ในปีที่ไทยอยู่ในรายชื่อ สมัครฟรี สิ่งที่ทำให้ตกรอบคือความผิดพลาดในใบสมัคร" } }
+      ]
+    },
+    {
+      "id": "after",
+      "en": { "name": "Refusals, waivers and after the visa", "blurb": "The second attempt, and what comes once you are there." },
+      "th": { "name": "ถูกปฏิเสธ การขอผ่อนผัน และหลังได้วีซ่า", "blurb": "การยื่นครั้งที่สอง และเรื่องที่ตามมาหลังจากนั้น" },
+      "items": [
+        { "code": "214(b)", "tags": ["asked"],
+          "en": { "name": "After a refusal", "blurb": "What changed since the last interview, written down and evidenced, before you pay the fee again." },
+          "th": { "name": "หลังถูกปฏิเสธ", "blurb": "อะไรเปลี่ยนไปตั้งแต่สัมภาษณ์ครั้งก่อน เขียนและมีหลักฐานรองรับ ก่อนจ่ายค่าธรรมเนียมอีกครั้ง" } },
+        { "code": "I-601 · I-601A",
+          "en": { "name": "Waivers", "blurb": "Prepared with US counsel, who files it." },
+          "th": { "name": "คำร้องขอผ่อนผัน", "blurb": "จัดเตรียมร่วมกับทนายความสหรัฐ ซึ่งเป็นผู้ยื่น" } },
+        { "code": "Renewal",
+          "en": { "name": "Renewal and interview waiver", "blurb": "Same visa, new passport, less trouble than the first time." },
+          "th": { "name": "ต่ออายุและยกเว้นการสัมภาษณ์", "blurb": "วีซ่าเดิม เล่มใหม่ ยุ่งยากน้อยกว่าครั้งแรก" } },
+        { "code": "I-131 · N-400",
+          "en": { "name": "Re-entry permit and naturalisation", "blurb": "For green card holders keeping a foot in both countries." },
+          "th": { "name": "ใบอนุญาตกลับเข้าประเทศและการขอสัญชาติ", "blurb": "สำหรับผู้ถือกรีนการ์ดที่ยังมีชีวิตอยู่สองประเทศ" } }
+      ]
+    }
+  ]
+}

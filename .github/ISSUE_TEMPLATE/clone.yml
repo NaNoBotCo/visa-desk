@@ -1,0 +1,19 @@
+name: Cloning got stuck
+description: Something in the template resisted being made yours
+labels: [clone]
+body:
+  - type: input
+    id: city
+    attributes:
+      label: Where are you setting it up
+      placeholder: Phuket, Da Nang, Tbilisi…
+  - type: textarea
+    id: stuck
+    attributes:
+      label: What you had to change by hand that a tool should have changed
+    validations: { required: true }
+  - type: textarea
+    id: command
+    attributes:
+      label: The brand.py command you ran
+      render: shell

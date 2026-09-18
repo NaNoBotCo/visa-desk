@@ -1,0 +1,21 @@
+# Partner list, QR codes and stickers. Real people; stays on this machine.
+partners-private/
+
+# The names that must not appear on the site. Local only — putting it in the
+# repo would publish the very thing it guards. tools/check.py reads it if it
+# is there and is quiet if it is not.
+.names-not-on-the-site
+
+.DS_Store
+.wrangler/
+node_modules/
+*.tmp.svg
+
+# Local operating notes: machine paths and the desk's own working detail.
+README.txt
+
+# Worker secrets: real recipient addresses and API keys.
+worker/.dev.vars
+
+# Generated commission statements.
+statements/

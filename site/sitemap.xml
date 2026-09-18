@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://chiangmaivisadesk.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiangmaivisadesk.com/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://chiangmaivisadesk.com/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/"/>
+    <changefreq>weekly</changefreq><priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/us-visas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiangmaivisadesk.com/us-visas/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://chiangmaivisadesk.com/th/us-visas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/us-visas/"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/farang-buddy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiangmaivisadesk.com/farang-buddy/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://chiangmaivisadesk.com/th/farang-buddy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/farang-buddy/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/partners/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiangmaivisadesk.com/partners/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://chiangmaivisadesk.com/th/partners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/partners/"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/th/</loc>
+    <changefreq>weekly</changefreq><priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/th/us-visas/</loc>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/th/farang-buddy/</loc>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/th/partners/</loc>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+</urlset>
