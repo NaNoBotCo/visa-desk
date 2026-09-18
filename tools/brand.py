@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Brand — set the name and the domain, then redraw the artwork.
 
-This is the file a cloner runs first. It rewrites site/assets/config.js, swaps
+The first file a licensed deployment runs. It rewrites site/assets/config.js, swaps
 the domain everywhere it appears as literal text (titles, canonical links,
 JSON-LD, llms.txt, sitemap, robots), and redraws the share card and the icon.
 

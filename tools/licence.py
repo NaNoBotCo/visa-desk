@@ -3,7 +3,7 @@
 
     python3 tools/licence.py
 
-A licensed copy is a clone of this repository with three things changed: its
+A licensed copy is a copy of this repository with three things changed: its
 name and domain (tools/brand.py), its recipient list (a Worker secret), and the
 licence block this tool writes. The licence id then rides on every enquiry that
 copy sends, which is what it is billed from — whether or not anyone remembers

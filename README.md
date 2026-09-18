@@ -1,21 +1,28 @@
 # Visa Desk
 
 [![check](https://github.com/NaNoBotCo/visa-desk/actions/workflows/check.yml/badge.svg)](https://github.com/NaNoBotCo/visa-desk/actions/workflows/check.yml)
-[![no dependencies](https://img.shields.io/badge/dependencies-none-2c6a58)](#sixty-seconds)
-[![licence MIT](https://img.shields.io/badge/template-MIT-c9761a)](LICENSE)
+[![no dependencies](https://img.shields.io/badge/dependencies-none-3B7361)](#running-it-locally)
+[![licensed, not open source](https://img.shields.io/badge/licence-required-24406E)](LICENSE)
 
 A small, fast, near-buildless website for a visa service — in two languages,
 with a 31-category visa catalogue, a free app to give away, and the referral
 machinery that pays the people who send it customers.
 
 Running at **[chiangmaivisadesk.com](https://chiangmaivisadesk.com)** — ten
-pages, English and Thai. Clone it for your own city in about a minute.
+pages, English and Thai.
+
+**The source is here to be read, not taken.** Running it, or anything derived
+from it, to operate a service needs a licence — including a copy rebranded for
+another city. Terms and pricing are at
+[/white-label/](https://chiangmaivisadesk.com/white-label/); the legal text is
+in [LICENSE](LICENSE). A licence is a working deployment on your own domain
+with your name on it, not a zip file you have to finish.
 
 ![The home page](docs/screenshots/home-light.png)
 
 ---
 
-## Why you might clone this
+## What it does
 
 - **No dependencies and no framework.** Handwritten HTML, one CSS file, one JS
   file. Open `site/index.html` and it works. One page — the visa catalogue — is
@@ -49,21 +56,30 @@ pages, English and Thai. Clone it for your own city in about a minute.
 - **A white-label licence that bills itself.** A licensed copy carries a
   licence id that rides on every enquiry it sends, so a deployment is counted
   whether or not anyone raises the invoice.
-- **A rebrand command**, because the whole point of a clone is that it stops
-  being ours.
+- **A licence that matches the business.** Source-available, licence required
+  to operate. The footer credit and the licence id are terms of it.
+- **A rebrand command**, so a licensed deployment stops looking like ours in
+  one step.
 - **Checks that fail on the mistakes a clone actually makes** — a half-swapped
   domain, broken JSON-LD, a local path in a page, a placeholder left behind.
 
-## Sixty seconds
+## Running it locally
 
-This repository is a GitHub **template** — press *Use this template* for your
-own copy, or clone it:
+To read it, audit it, or evaluate it before licensing:
 
 ```sh
 git clone https://github.com/NaNoBotCo/visa-desk.git
 cd visa-desk
-python3 tools/brand.py --name "Phuket Visa Desk" --domain phuketvisadesk.com
 make dev            # http://localhost:4173
+make check          # the full check suite
+```
+
+Once a licence is issued, `tools/brand.py` puts the licensee's name and domain
+through the whole site in one command, and `tools/licence.py` writes the
+licence block and setup sheet for that deployment.
+
+```sh
+python3 tools/brand.py --name "Phuket Visa Desk" --domain phuketvisadesk.com
 ```
 
 `brand.py` rewrites the config, swaps the domain in every title, canonical link,
@@ -268,9 +284,14 @@ height opens up for Thai ascenders and descenders.
 
 ## Licence
 
-See [LICENSE](LICENSE). The template — HTML, CSS, JavaScript, the tools and the
-Worker — is MIT. The name, the wordmark and the service copy belong to the desk
-that runs it; `tools/brand.py` exists so that replacing them takes one command.
+Source-available, all rights reserved. Reading, auditing and evaluating it are
+free. Operating a service with it, or with anything derived from it, needs a
+licence — see [LICENSE](LICENSE), and
+[/white-label/](https://chiangmaivisadesk.com/white-label/) for terms.
+
+Two terms hold for the life of a licence: the build credit stays in the footer,
+and the licence id stays in the configuration. They are how a deployment is
+recognised and counted.
 
 ---
 

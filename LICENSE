@@ -1,34 +1,50 @@
-VISA DESK — licences, in layers
+VISA DESK — licence
 
-TEMPLATE — site/index.html, site/partners/, site/assets/style.css,
-           site/assets/app.js, site/assets/config.js, tools/, worker/,
-           Makefile, deploy.sh
-  MIT.
+Copyright (c) 2026 NaN. All rights reserved.
 
-  Copyright (c) 2026 NaN
+This repository is published so that it can be read, audited and evaluated. It
+is not open source, and reading it grants no right to use it.
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy of
-  this software and associated documentation files (the "Software"), to deal in the
-  Software without restriction, including without limitation the rights to use,
-  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
-  Software, and to permit persons to whom the Software is furnished to do so,
-  subject to the following conditions:
+WHAT YOU MAY DO WITHOUT ASKING
 
-  The above copyright notice and this permission notice shall be included in all
-  copies or substantial portions of the Software.
+  Read the source. Run it locally to evaluate it. Quote short excerpts with
+  attribution when writing about it. Open an issue or a pull request.
 
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-  FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
-  AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+WHAT REQUIRES A LICENCE FROM US
 
-THE DESK'S OWN NAME AND COPY
-  The name "Chiang Mai Visa Desk", the wordmark, the share card as drawn, and the
-  service and question text written for that business are not covered by the MIT
-  grant above. Clone the template and put your own there — that is what
-  tools/brand.py is for, and it takes one command.
+  Running this software, or any work derived from it, to operate a service —
+  whether or not money changes hands. That includes rebranding it for another
+  city, another country or another trade, and includes copies that replace the
+  name, the copy, the colours or the artwork.
 
-SCREENSHOTS — docs/screenshots/
-  Pictures of the above. Same split: the layout is MIT, the name in them is not.
+  Terms and pricing: https://chiangmaivisadesk.com/white-label/
+
+WHAT A LICENCE CARRIES
+
+  A licence names the holder, the place it covers and a licence id. It permits
+  a single deployment, on domains agreed in writing. Two terms hold for the
+  life of it:
+
+    The build credit stays in the footer of every page.
+    The licence id stays in the deployment's configuration.
+
+  Both are how a licensed deployment is recognised and counted.
+
+THIRD-PARTY WORK
+
+  Fonts are the reader's own system faces; none are redistributed here.
+  Anything else vendored in future carries its own licence and says so.
+
+NO WARRANTY
+
+  The software is provided "as is", without warranty of any kind, express or
+  implied, including the warranties of merchantability, fitness for a
+  particular purpose and noninfringement. In no event shall the authors or
+  copyright holders be liable for any claim, damages or other liability,
+  whether in an action of contract, tort or otherwise, arising from, out of or
+  in connection with the software or the use or other dealings in it.
+
+NOT A LICENCE TO THE NAME
+
+  "Chiang Mai Visa Desk", the wordmark, the share card and the service copy
+  written for that business stay with it under any licence.
