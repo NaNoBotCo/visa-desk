@@ -1,5 +1,9 @@
 # Visa Desk
 
+[![check](https://github.com/NaNoBotCo/visa-desk/actions/workflows/check.yml/badge.svg)](https://github.com/NaNoBotCo/visa-desk/actions/workflows/check.yml)
+[![no dependencies](https://img.shields.io/badge/dependencies-none-2c6a58)](#sixty-seconds)
+[![licence MIT](https://img.shields.io/badge/template-MIT-c9761a)](LICENSE)
+
 A small, fast, near-buildless website for a visa service — in two languages,
 with a 31-category visa catalogue, a free app to give away, and the referral
 machinery that pays the people who send it customers.
@@ -39,6 +43,9 @@ for your own city in about a minute.
   domain, broken JSON-LD, a local path in a page, a placeholder left behind.
 
 ## Sixty seconds
+
+This repository is a GitHub **template** — press *Use this template* for your
+own copy, or clone it:
 
 ```sh
 git clone https://github.com/NaNoBotCo/visa-desk.git
