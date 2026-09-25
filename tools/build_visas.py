@@ -329,7 +329,7 @@ def render(lang, data):
     locale = "en_US" if lang == "en" else "th_TH"
 
     return f"""<!doctype html>
-<html lang="{w["lang"]}">
+<html lang="{w["lang"]}" translate="no" class="notranslate">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -356,6 +356,9 @@ def render(lang, data):
 <script type="application/ld+json">
 {json.dumps(ld, ensure_ascii=False, indent=2)}
 </script>
+<meta name="google" content="notranslate">
+<meta name="robots" content="notranslate">
+<script>if(/[.]translate[.]goog$/.test(location.hostname))location.replace("https://"+location.hostname.slice(0,-15).replace(/--/g,"~").replace(/-/g,".").replace(/~/g,"-")+location.pathname+location.search.replace(/([?&])_x_tr_[^&]*/g,"$1").replace(/[?&]+$/,"").replace(/[?]&+/,"?")+location.hash)</script>
 </head>
 <body>
 <a class="skip" href="#quote">{esc(w["quote_h"])}</a>
