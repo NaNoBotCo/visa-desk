@@ -522,6 +522,7 @@ def render(lang, data):
 {nav}
       <a href="{w["wl"][1]}">{esc(w["wl"][0])}</a>
       <a href="{w["md"][1]}">{esc(w["md"][0])}</a>
+      <a href="https://motdang.net/cm/">เชียงใหม่ · Chiang Mai</a>
       <a href="{w["other"][1]}" hreflang="{other_lang}">{esc(w["other"][0])}</a>
     </nav>
   </div>
