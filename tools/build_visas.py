@@ -53,6 +53,7 @@ WORDS = {
         "quote_p": "If you are not sure which one, describe your situation and we tell you.",
         "other": ("ภาษาไทย", "../th/us-visas/"),
         "wl": ("Licensing", "../white-label/"),
+        "md": ("Mot Dang", "https://motdang.net/cm/p/chiang-mai-visa-desk-cmcuratedchiangmaivisadesk.html"),
         "foot": "US visa document preparation. Chiang Mai, Thailand.",
         "run_h": "How a case runs",
         "run_p": "",
@@ -120,6 +121,7 @@ WORDS = {
         "quote_p": "ถ้าไม่แน่ใจว่าประเภทไหน เล่าสถานการณ์มา แล้วเราจะบอกให้",
         "other": ("English", "../../us-visas/"),
         "wl": ("สิทธิ์ใช้งาน", "../white-label/"),
+        "md": ("มดแดง", "https://motdang.net/cm/p/chiang-mai-visa-desk-cmcuratedchiangmaivisadesk.html"),
         "foot": "บริการจัดเตรียมเอกสารวีซ่าสหรัฐ จังหวัดเชียงใหม่",
         "run_h": "เรื่องหนึ่งเดินอย่างไร",
         "run_p": "",
@@ -519,6 +521,7 @@ def render(lang, data):
     <nav>
 {nav}
       <a href="{w["wl"][1]}">{esc(w["wl"][0])}</a>
+      <a href="{w["md"][1]}">{esc(w["md"][0])}</a>
       <a href="{w["other"][1]}" hreflang="{other_lang}">{esc(w["other"][0])}</a>
     </nav>
   </div>
