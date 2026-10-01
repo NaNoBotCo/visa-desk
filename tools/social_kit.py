@@ -22,6 +22,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "brand" / "social"
+# Every file carries the brand code, so a download is still findable in ~/Downloads
+# next to another site's kit.
+CODE = "CMVD"
 
 INK = "#14161C"
 PAPER = "#F1EEE5"
@@ -94,20 +97,29 @@ def frame(w, h, body, ground=INK):
 
 # ------------------------------------------------------------------- designs
 
-def avatar(size):
+def avatar(size, scale=620):
     s = size / 1024.0
-    return frame(size, size, mark(size / 2, size / 2, 620 * s))
+    return frame(size, size, mark(size / 2, size / 2, scale * s))
+
+
+def fb_avatar(size=1024):
+    """Facebook shows the picture as a circle at 40px in comments: the stamp fills more."""
+    return avatar(size, scale=900)
 
 
 def fb_cover(w=1640, h=630):
+    """Phones crop the sides to the middle ~1120px; everything readable stays inside it.
+    The lower left stays clear for the profile picture."""
     cx = w / 2
     return frame(w, h, "".join([
         ghost(w - 190, h / 2, 520),
-        mark(cx, 168, 104),
-        wordmark(cx, 320, 74),
-        rule(cx, 356, 190),
-        line(cx, 428, SERVICES_EN, 27, fill=PAPER_DIM),
-        line(cx, 486, DOMAIN, 27, fill=GOLD, weight="600", ls="1.2"),
+        mark(cx, 118, 96),
+        wordmark(cx, 258, 74),
+        rule(cx, 292, 190),
+        line(cx, 364, LEDE_TH, 44, font=THAI, weight="700"),
+        line(cx, 426, SERVICES_EN, 25, fill=PAPER_DIM),
+        line(cx, 468, SERVICES_TH, 24, font=THAI, fill=PAPER_DIM),
+        line(cx, 536, DOMAIN, 27, fill=GOLD, weight="600", ls="1.2"),
     ]))
 
 
@@ -169,7 +181,8 @@ SPECS = [
     ("avatar-1024.png", 1024, 1024, lambda: avatar(1024), "master square; keep a copy"),
     ("avatar-800-youtube.png", 800, 800, lambda: avatar(800), "YouTube channel picture"),
     ("avatar-640-line.png", 640, 640, lambda: avatar(640), "LINE OA profile image (max 3 MB)"),
-    ("avatar-320-facebook-instagram.png", 320, 320, lambda: avatar(320), "Facebook Page + Instagram"),
+    ("avatar-320-facebook-instagram.png", 320, 320, lambda: avatar(320), "Instagram"),
+    ("avatar-facebook-1024.png", 1024, 1024, fb_avatar, "Facebook profile picture; circle crop"),
     ("avatar-200-tiktok.png", 200, 200, lambda: avatar(200), "TikTok profile picture"),
     ("cover-facebook-1640x630.png", 1640, 630, fb_cover, "Facebook Page cover; text inside the mobile crop"),
     ("cover-line-1080x878.png", 1080, 878, line_cover, "LINE OA cover image"),
@@ -237,14 +250,14 @@ def main(argv=None):
     args = ap.parse_args(argv)
     if args.list:
         for name, w, h, _, why in SPECS:
-            print(f"{name:38} {w:>5}x{h:<5} {why}")
+            print(f"{CODE}-{name:38} {w:>5}x{h:<5} {why}")
         return 0
     OUT.mkdir(parents=True, exist_ok=True)
     for name, w, h, build, why in SPECS:
-        out = OUT / name
+        out = OUT / f"{CODE}-{name}"
         render(build(), out, w, h)
         kb = out.stat().st_size / 1024
-        print(f"{name:38} {w:>5}x{h:<5} {kb:7.0f} KB  {why}")
+        print(f"{CODE}-{name:38} {w:>5}x{h:<5} {kb:7.0f} KB  {why}")
     print(f"\n{len(SPECS)} files in {OUT}")
     return 0
 

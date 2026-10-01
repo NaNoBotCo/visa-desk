@@ -96,17 +96,17 @@ BLOCKS = [
 ]
 
 UPLOADS = [
-    ("LINE OA", "profile image", "brand/social/avatar-640-line.png"),
-    ("LINE OA", "cover image", "brand/social/cover-line-1080x878.png"),
-    ("Facebook Page", "profile picture", "brand/social/avatar-320-facebook-instagram.png"),
-    ("Facebook Page", "cover photo", "brand/social/cover-facebook-1640x630.png"),
-    ("Facebook Page", "first post", "brand/social/post-square-1080.png"),
-    ("Instagram", "profile picture", "brand/social/avatar-320-facebook-instagram.png"),
-    ("Instagram", "first post", "brand/social/post-square-1080.png"),
-    ("TikTok", "profile picture", "brand/social/avatar-200-tiktok.png"),
-    ("TikTok", "video cover / first post", "brand/social/post-vertical-1080x1920.png"),
-    ("YouTube", "channel picture", "brand/social/avatar-800-youtube.png"),
-    ("YouTube", "banner", "brand/social/banner-youtube-2560x1440.png"),
+    ("LINE OA", "profile image", "brand/social/CMVD-avatar-640-line.png"),
+    ("LINE OA", "cover image", "brand/social/CMVD-cover-line-1080x878.png"),
+    ("Facebook Page", "profile picture", "brand/social/CMVD-avatar-facebook-1024.png"),
+    ("Facebook Page", "cover photo", "brand/social/CMVD-cover-facebook-1640x630.png"),
+    ("Facebook Page", "first post", "brand/social/CMVD-post-square-1080.png"),
+    ("Instagram", "profile picture", "brand/social/CMVD-avatar-320-facebook-instagram.png"),
+    ("Instagram", "first post", "brand/social/CMVD-post-square-1080.png"),
+    ("TikTok", "profile picture", "brand/social/CMVD-avatar-200-tiktok.png"),
+    ("TikTok", "video cover / first post", "brand/social/CMVD-post-vertical-1080x1920.png"),
+    ("YouTube", "channel picture", "brand/social/CMVD-avatar-800-youtube.png"),
+    ("YouTube", "banner", "brand/social/CMVD-banner-youtube-2560x1440.png"),
 ]
 
 SETUP = """\
