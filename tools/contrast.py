@@ -9,9 +9,9 @@ screen, and fails if any of them falls under its target.
 
 Targets used here:
     body text          7.0   (AAA for normal text)
-    secondary text     4.5   (AA)
-    large text         4.5   (AA large, 24px+ or bold 19px+)
-    text on a button   4.5
+    secondary text     7.0
+    hints, placeholders, tags   7.0
+    text on a button   7.0
     non-text (borders, focus rings, icons)   3.0
 
 Run by `make check`, so a palette change cannot quietly drop below them.
@@ -69,15 +69,21 @@ PAIRS = [
     ("ink", "paper", 7.0, "body text on the page"),
     ("ink", "paper-2", 7.0, "body text on a banded section"),
     ("ink", "card", 7.0, "body text on a card"),
-    ("ink-2", "paper", 4.5, "secondary text on the page"),
-    ("ink-2", "paper-2", 4.5, "secondary text on a banded section"),
-    ("ink-2", "card", 4.5, "secondary text on a card"),
-    ("ink-3", "paper", 4.5, "hints and captions on the page"),
-    ("ink-3", "card", 4.5, "hints and captions on a card"),
+    ("ink-2", "paper", 7.0, "secondary text on the page"),
+    ("ink-2", "paper-2", 7.0, "secondary text on a banded section"),
+    ("ink-2", "card", 7.0, "secondary text on a card"),
+    ("ink-3", "paper", 7.0, "hints and captions on the page"),
+    ("ink-3", "card", 7.0, "hints and captions on a card"),
+    ("ink-3", "paper-2", 7.0, "hints and captions on a banded section"),
+    ("ink-3", "field-bg", 7.0, "placeholder text in a field"),
+    ("celadon", "card", 7.0, "LINE heading and link on a card"),
+    ("celadon", "paper", 7.0, "LINE link on the page"),
     ("marigold", "paper", 3.0, "accent against the page"),
-    ("jade", "card", 4.5, "tick marks and success text"),
-    ("chip-ink", "chip-bg", 4.5, "code on a referral chip"),
+    ("jade", "card", 7.0, "tick marks and success text"),
+    ("chip-ink", "chip-bg", 7.0, "code on a referral chip"),
     ("field-line", "field-bg", 3.0, "input border, so the field is findable"),
+    ("field-line", "paper", 3.0, "outline of a ghost button or language pill"),
+    ("field-line", "paper-2", 3.0, "outline of a ghost button on a banded section"),
     ("focus", "paper", 3.0, "focus ring against the page"),
     ("focus", "card", 3.0, "focus ring on a card"),
     ("line", "paper", 1.2, "hairline between sections (decorative)"),
@@ -85,10 +91,12 @@ PAIRS = [
 
 # Buttons: text colour is fixed in the rule, not a token.
 BUTTONS = [
-    ("btn-ink", "accent", 4.5, "button label on the accent fill"),
-    ("line-green-ink", "line-green", 4.5, "button label on the LINE fill"),
-    ("paper", "ink", 4.5, "button label on the dark fill"),
-    ("pill-ink", "pill-bg", 4.5, "tag pill text"),
+    ("btn-ink", "accent", 7.0, "button label on the accent fill"),
+    ("line-green-ink", "line-green", 7.0, "button label on the LINE fill"),
+    ("paper", "ink", 7.0, "button label on the dark fill"),
+    ("pill-ink", "pill-bg", 7.0, "tag pill text"),
+    ("pill2-ink", "pill2-bg", 7.0, "green tag pill text"),
+    ("chip-ink", "card", 7.0, "code on a card"),
 ]
 
 
