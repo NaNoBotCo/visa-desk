@@ -344,7 +344,7 @@ html[lang="shn"] h1,html[lang="shn"] h2,html[lang="shn"] h3{font-family:inherit;
 .linepanel > div{flex:1 1 20rem}
 .linepanel h3{display:flex;align-items:center;gap:.5rem;font-size:1.25rem;color:var(--celadon)}
 .linepanel p{margin:.7rem 0 1.2rem;color:var(--ink-2);max-width:44ch}
-.lineqr{width:132px;height:132px;border-radius:14px;background:#fff;padding:8px;
+.lineqr{width:132px;height:132px;border-radius:14px;background:#0E1F3D;padding:0;
   border:1px solid var(--line);flex:none}
 
 /* --------------------------------------------------------------- share sheet */
