@@ -260,6 +260,8 @@ footer nav{display:flex;gap:1.2rem;flex-wrap:wrap}
 :lang(th) h1,:lang(th) h2,:lang(th) h3{letter-spacing:0;line-height:1.28}
 html[lang="th"] body{font-family:"Sukhumvit Set","Noto Sans Thai",Thonburi,"Leelawadee UI","Krungthep",var(--sans);line-height:1.78}
 html[lang="th"] h1,html[lang="th"] h2,html[lang="th"] h3{font-family:inherit;font-weight:700}
+html[lang="shn"] body{font-family:"Noto Sans Myanmar","Myanmar Text","Pyidaungsu","Myanmar Sangam MN",var(--sans);line-height:1.9}
+html[lang="shn"] h1,html[lang="shn"] h2,html[lang="shn"] h3{font-family:inherit;font-weight:700;letter-spacing:0;line-height:1.5}
 
 /* ------------------------------------------------------------- visa tables */
 .lane{max-width:66ch}

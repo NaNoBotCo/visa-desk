@@ -56,4 +56,28 @@
     <loc>https://chiangmaivisadesk.com/th/white-label/</loc>
     <changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/migrant-workers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiangmaivisadesk.com/migrant-workers/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://chiangmaivisadesk.com/th/migrant-workers/"/>
+    <xhtml:link rel="alternate" hreflang="shn" href="https://chiangmaivisadesk.com/shn/migrant-workers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/migrant-workers/"/>
+    <changefreq>weekly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/th/migrant-workers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiangmaivisadesk.com/migrant-workers/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://chiangmaivisadesk.com/th/migrant-workers/"/>
+    <xhtml:link rel="alternate" hreflang="shn" href="https://chiangmaivisadesk.com/shn/migrant-workers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/migrant-workers/"/>
+    <changefreq>weekly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/shn/migrant-workers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiangmaivisadesk.com/migrant-workers/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://chiangmaivisadesk.com/th/migrant-workers/"/>
+    <xhtml:link rel="alternate" hreflang="shn" href="https://chiangmaivisadesk.com/shn/migrant-workers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/migrant-workers/"/>
+    <changefreq>weekly</changefreq><priority>0.9</priority>
+  </url>
 </urlset>
