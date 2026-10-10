@@ -30,12 +30,20 @@
   airport desk.
 - **Documents** — bank letters, lease copies, translation, certification,
   embassy paperwork.
+- **Workers from Myanmar, Laos, Cambodia and Vietnam** — MOU recruitment
+  (quota, contract, arrival filings), work permits, renewals on the Department
+  of Employment's e-WorkPermit system, change of employer, social security or
+  health insurance, the Non-Immigrant L-A visa, 90-day reports, TM30 and
+  re-entry permits, for employers and for the workers. Page in English, Thai
+  and Shan at /migrant-workers/, with government fees and dates, each with its
+  source, read 10 October 2026.
 
 ## Who it serves
 
 DTV holders, retirees, and people on marriage, education, business and TR
 visas who live in or around Chiang Mai and need to leave and re-enter
-periodically. Also employers and their staff, and foreigners starting a company
+periodically. Also employers and their staff, employers of workers from Myanmar, Laos,
+Cambodia and Vietnam and those workers, and foreigners starting a company
 in Thailand who need the registration, the tax ID and the work permit handled
 together. Couples, housemates and coworking floors can book as one group.
 
@@ -117,11 +125,14 @@ every page carries an add-friend button and a QR code for it.
 ## Languages
 
 Every page exists in English and Thai, linked by hreflang. English is at the
-root; Thai is under /th/.
+root; Thai is under /th/. The migrant-workers page is also in Shan, under /shn/.
 
 ## Pages
 
 - [Home](https://chiangmaivisadesk.com/): services, how it works, questions, quote form
+- [Migrant workers](https://chiangmaivisadesk.com/migrant-workers/): workers from Myanmar, Laos, Cambodia and Vietnam, and their employers
+- [แรงงานต่างด้าว](https://chiangmaivisadesk.com/th/migrant-workers/): the same page in Thai
+- [ၵူၼ်းႁဵတ်းၵၢၼ်](https://chiangmaivisadesk.com/shn/migrant-workers/): the same page in Shan
 - [US visas](https://chiangmaivisadesk.com/us-visas/): 31 categories a Thai passport can apply for
 - [FarangBuddy](https://chiangmaivisadesk.com/farang-buddy/): the free stay tracker, and how to install it
 - [Partners](https://chiangmaivisadesk.com/partners/): referral programme and application

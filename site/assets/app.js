@@ -3,7 +3,7 @@
   var C = window.DESK || {};
   var R = C.ref || {};
   var $ = function (s) { return document.querySelector(s); };
-  var LANG = (document.documentElement.getAttribute("lang") || "en").slice(0, 2);
+  var LANG = (document.documentElement.getAttribute("lang") || "en").split("-")[0];
 
   // Asset paths in config are written from the site root; pages sit at
   // different depths, so take the prefix from the stylesheet that already
@@ -31,6 +31,14 @@
       onLine: "LINE", onWhats: "WhatsApp", onFb: "Facebook", onTg: "Telegram",
       onX: "X", onMail: "อีเมล", scan: "หรือให้เขาสแกนอันนี้",
       shareText: "บริการวีซ่าและวิ่งชายแดน เชียงใหม่"
+    },
+    shn: {
+      lineAsk: "ထၢမ် တီႈ LINE", lineAdd: "ထႅမ်သႂ်ႇ ႁဝ်း ၼႂ်း LINE", lineId: "LINE",
+      lineBlurb: "ထႅမ်သႂ်ႇ ႁဝ်း ၼႂ်း LINE သေ သူင်ႇ ဝၼ်းထိ မႃး။",
+      shareTitle: "ၽႄ", share: "ၽႄ", copy: "ဢဝ် link", copied: "ဢဝ်ယဝ်ႉ",
+      onLine: "LINE", onWhats: "WhatsApp", onFb: "Facebook", onTg: "Telegram",
+      onX: "X", onMail: "Email", scan: "ဢမ်ႇၼၼ် scan ဢၼ်ၼႆႉ",
+      shareText: "ၽိုၼ်ႁဵတ်းၵၢၼ် ၵူၼ်းႁဵတ်းၵၢၼ် Chiang Mai"
     }
   };
   var T = LABELS[LANG] || LABELS.en;
@@ -341,6 +349,7 @@
       var lines = [
         "Name: " + (d.name || ""),
         "Contact: " + (d.contact || ""),
+        "Who: " + (d.who || ""),
         "Visa: " + (d.visa || "not sure"),
         "Needs: " + (d.need || ""),
         "Date: " + (d.date || ""),
