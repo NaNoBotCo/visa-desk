@@ -19,7 +19,7 @@ window.DESK = {
   line: {
     id: "@964yxgnk",                  // the Official Account's basic id
     name: "",                         // shown instead of the id when set
-    qr: "assets/line-qr.png"          // redrawn by tools/brand.py
+    qr: "assets/line-qr.png?v=2"     // green on dark blue, 7.3:1
   },
 
   // Other handles shown on the contact row. Empty ones are hidden.
