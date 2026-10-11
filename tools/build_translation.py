@@ -44,7 +44,7 @@ W = {
         "how_h": "How it works",
         "how": [
             ("The papers", "A photo or scan of each page, the languages, and the office the papers go to."),
-            ("The price", "In writing, by the pages, the words or the hours."),
+            ("The price", "From the prices above, in writing. Interpreting by quote."),
             ("Delivery", "A PDF on LINE or by email, and stamped paper copies in Chiang Mai."),
         ],
         "form_h": "Get a quote",
@@ -52,7 +52,7 @@ W = {
         "f_contact": "Email, LINE or WhatsApp", "f_contact_ph": "Where we should reply",
         "f_who": "You are", "f_whos": ["Applying for myself", "An employer", "A worker", "Helping someone else"],
         "f_langs": "Languages", "f_langs_o": ["Thai → English", "English → Thai", "Burmese → Thai", "Thai → Burmese", "Burmese → English", "English → Burmese"],
-        "f_need": "What it is", "f_needs": ["Bank letter or statement", "Birth, marriage or divorce certificate", "House registration", "Contract or payslips", "School papers", "Pink card, CI or passport", "Police or medical papers", "Interpreter at an office", "Something else"],
+        "f_need": "What it is", "f_needs": ["Bank letter or statement", "Birth, marriage or divorce certificate", "House registration", "Contract or payslips", "School papers", "Pink card, CI or passport", "Police or medical papers", "Checking an existing translation", "Interpreter at an office", "Something else"],
         "f_date": "Needed by", "f_date_hint": "An approximate date is fine.",
         "f_where": "Office", "f_where_ph": "For example: Chiang Mai Immigration",
         "f_notes": "Anything else", "f_notes_ph": "For example: how many pages, or the visa the papers are for.",
@@ -63,7 +63,7 @@ W = {
             ("Which languages?", "Thai, English and Burmese, in any direction between them."),
             ("Is a phone photo enough to price it?", "Yes, when every line can be read."),
             ("Do you notarize?", "No. A translated page carries the translator's name, the date and the desk's stamp."),
-            ("What does it cost?", "Each job is priced in writing, by the pages, the words or the hours."),
+            ("What does it cost?", "A new translation is ฿1,500 up to 5 pages, then ฿500 a page. Checking an existing translation is ฿500 up to 5 pages, then ฿150 a page. The stamp is ฿100 a page. Interpreting is priced in writing."),
         ],
         "foot_tag": "A Thai-registered company. Chiang Mai, Thailand.",
         "foot": ["Thailand services", "Migrant workers", "Translation", "US visas", "Free app", "Partners", "Licensing"],
@@ -95,7 +95,7 @@ W = {
         "how_h": "ขั้นตอน",
         "how": [
             ("เอกสาร", "รูปถ่ายหรือสแกนทุกหน้า ภาษาที่ต้องการ และหน่วยงานที่จะยื่น"),
-            ("ราคา", "เป็นลายลักษณ์อักษร ตามจำนวนหน้า คำ หรือชั่วโมง"),
+            ("ราคา", "ตามราคาด้านบน เป็นลายลักษณ์อักษร ล่ามคิดตามใบเสนอราคา"),
             ("ส่งคืน", "PDF ทาง LINE หรืออีเมล และฉบับกระดาษประทับตราในเชียงใหม่"),
         ],
         "form_h": "ขอใบเสนอราคา",
@@ -103,7 +103,7 @@ W = {
         "f_contact": "อีเมล ไลน์ หรือ WhatsApp", "f_contact_ph": "ช่องทางที่ให้เราตอบกลับ",
         "f_who": "คุณคือ", "f_whos": ["ยื่นเอง", "นายจ้าง", "แรงงาน", "ช่วยคนอื่น"],
         "f_langs": "ภาษา", "f_langs_o": ["ไทย → อังกฤษ", "อังกฤษ → ไทย", "พม่า → ไทย", "ไทย → พม่า", "พม่า → อังกฤษ", "อังกฤษ → พม่า"],
-        "f_need": "เอกสารอะไร", "f_needs": ["หนังสือรับรองหรือรายการเดินบัญชีธนาคาร", "สูติบัตร ทะเบียนสมรส หรือทะเบียนหย่า", "ทะเบียนบ้าน", "สัญญาจ้างหรือสลิปเงินเดือน", "เอกสารโรงเรียน", "บัตรชมพู CI หรือหนังสือเดินทาง", "เอกสารตำรวจหรือแพทย์", "ล่ามที่หน่วยงาน", "เรื่องอื่น"],
+        "f_need": "เอกสารอะไร", "f_needs": ["หนังสือรับรองหรือรายการเดินบัญชีธนาคาร", "สูติบัตร ทะเบียนสมรส หรือทะเบียนหย่า", "ทะเบียนบ้าน", "สัญญาจ้างหรือสลิปเงินเดือน", "เอกสารโรงเรียน", "บัตรชมพู CI หรือหนังสือเดินทาง", "เอกสารตำรวจหรือแพทย์", "ตรวจงานแปลที่มีอยู่", "ล่ามที่หน่วยงาน", "เรื่องอื่น"],
         "f_date": "ต้องการภายใน", "f_date_hint": "วันที่โดยประมาณก็ได้",
         "f_where": "หน่วยงาน", "f_where_ph": "เช่น ตรวจคนเข้าเมืองเชียงใหม่",
         "f_notes": "อื่น ๆ", "f_notes_ph": "เช่น จำนวนหน้า หรือวีซ่าที่ใช้เอกสารนี้",
@@ -114,7 +114,7 @@ W = {
             ("แปลภาษาอะไรบ้าง", "ไทย อังกฤษ และพม่า ทุกทิศทาง"),
             ("รูปจากโทรศัพท์พอสำหรับประเมินราคาไหม", "พอ ถ้าอ่านออกทุกบรรทัด"),
             ("รับรองโนตารีไหม", "ไม่ หน้าที่แปลแล้วมีชื่อผู้แปล วันที่ และตราของเดสก์"),
-            ("ราคาเท่าไร", "ทุกงานมีใบเสนอราคาเป็นลายลักษณ์อักษร ตามจำนวนหน้า คำ หรือชั่วโมง"),
+            ("ราคาเท่าไร", "แปลใหม่ ฿1,500 ไม่เกิน 5 หน้า หน้าต่อไปหน้าละ ฿500 ตรวจงานแปลที่มีอยู่ ฿500 ไม่เกิน 5 หน้า หน้าต่อไปหน้าละ ฿150 ตราประทับหน้าละ ฿100 ล่ามคิดตามใบเสนอราคา"),
         ],
         "foot_tag": "บริษัทจดทะเบียนในประเทศไทย เชียงใหม่",
         "foot": ["บริการในไทย", "แรงงานต่างด้าว", "แปลเอกสาร", "วีซ่าอเมริกา", "แอปฟรี", "พันธมิตร", "สิทธิ์ใช้งาน"],
@@ -146,7 +146,7 @@ W = {
         "how_h": "လုပ်ပုံ",
         "how": [
             ("စာရွက်များ", "စာမျက်နှာတိုင်း၏ ဓာတ်ပုံ သို့မဟုတ် စကင်ဖိုင်၊ ဘာသာစကားနှင့် တင်မည့်ရုံး။"),
-            ("စျေးနှုန်း", "စာဖြင့်၊ စာမျက်နှာ၊ စာလုံး သို့မဟုတ် နာရီအလိုက်။"),
+            ("စျေးနှုန်း", "အထက်ပါ စျေးနှုန်းအတိုင်း စာဖြင့်။ စကားပြန်ကို သီးခြား စျေးနှုန်းပေးပါသည်။"),
             ("ပြန်ပို့ခြင်း", "LINE သို့မဟုတ် အီးမေးလ်ဖြင့် PDF၊ ချင်းမိုင်တွင် တံဆိပ်တုံးထားသော စာရွက်မူ။"),
         ],
         "form_h": "စျေးနှုန်း",
@@ -154,7 +154,7 @@ W = {
         "f_contact": "အီးမေးလ်၊ LINE သို့မဟုတ် WhatsApp", "f_contact_ph": "ပြန်ကြားရမည့်နေရာ",
         "f_who": "သင်သည်", "f_whos": ["ကိုယ်တိုင် လျှောက်သူ", "အလုပ်ရှင်", "အလုပ်သမား", "အခြားသူကို ကူညီသူ"],
         "f_langs": "ဘာသာစကား", "f_langs_o": ["မြန်မာ → ထိုင်း", "ထိုင်း → မြန်မာ", "မြန်မာ → အင်္ဂလိပ်", "အင်္ဂလိပ် → မြန်မာ", "ထိုင်း → အင်္ဂလိပ်", "အင်္ဂလိပ် → ထိုင်း"],
-        "f_need": "ဘာစာရွက်လဲ", "f_needs": ["ဘဏ်ထောက်ခံစာ သို့မဟုတ် စာရင်းရှင်းတမ်း", "မွေးစာရင်း၊ လက်ထပ် သို့မဟုတ် ကွာရှင်း စာချုပ်", "အိမ်ထောင်စုစာရင်း", "အလုပ်ခန့်စာချုပ် သို့မဟုတ် လစာစလစ်", "ကျောင်းစာရွက်", "ပန်းရောင်ကတ်၊ CI သို့မဟုတ် နိုင်ငံကူးလက်မှတ်", "ရဲ သို့မဟုတ် ဆေး စာရွက်", "ရုံးတွင် စကားပြန်", "အခြား"],
+        "f_need": "ဘာစာရွက်လဲ", "f_needs": ["ဘဏ်ထောက်ခံစာ သို့မဟုတ် စာရင်းရှင်းတမ်း", "မွေးစာရင်း၊ လက်ထပ် သို့မဟုတ် ကွာရှင်း စာချုပ်", "အိမ်ထောင်စုစာရင်း", "အလုပ်ခန့်စာချုပ် သို့မဟုတ် လစာစလစ်", "ကျောင်းစာရွက်", "ပန်းရောင်ကတ်၊ CI သို့မဟုတ် နိုင်ငံကူးလက်မှတ်", "ရဲ သို့မဟုတ် ဆေး စာရွက်", "ရှိပြီးသား ဘာသာပြန်ကို စစ်ဆေးခြင်း", "ရုံးတွင် စကားပြန်", "အခြား"],
         "f_date": "လိုအပ်သည့်ရက်", "f_date_hint": "ခန့်မှန်းရက်ဖြင့် ရပါသည်။",
         "f_where": "ရုံး", "f_where_ph": "ဥပမာ - ချင်းမိုင် လူဝင်မှုကြီးကြပ်ရေးရုံး",
         "f_notes": "အခြားအချက်များ", "f_notes_ph": "ဥပမာ - စာမျက်နှာ အရေအတွက်၊ သို့မဟုတ် စာရွက်များ သုံးမည့် ဗီဇာ။",
@@ -165,12 +165,29 @@ W = {
             ("ဘယ်ဘာသာတွေလဲ။", "ထိုင်း၊ အင်္ဂလိပ်နှင့် မြန်မာ၊ မည်သည့်ဘက်သို့မဆို။"),
             ("စျေးနှုန်းအတွက် ဖုန်းဓာတ်ပုံ လုံလောက်သလား။", "စာကြောင်းတိုင်း ဖတ်၍ရလျှင် လုံလောက်ပါသည်။"),
             ("နိုတာရီ လုပ်ပေးသလား။", "မလုပ်ပါ။ ဘာသာပြန်ထားသော စာမျက်နှာတွင် ဘာသာပြန်သူ၏အမည်၊ ရက်စွဲနှင့် ဒက်စ်၏ တံဆိပ် ပါပါသည်။"),
-            ("ဘယ်လောက်ကျသလဲ။", "အလုပ်တိုင်းကို စာမျက်နှာ၊ စာလုံး သို့မဟုတ် နာရီအလိုက် စာဖြင့် စျေးနှုန်းပေးပါသည်။"),
+            ("ဘယ်လောက်ကျသလဲ။", "ဘာသာပြန်အသစ် ၅ မျက်နှာအထိ ฿1,500၊ ထို့နောက် တစ်မျက်နှာလျှင် ฿500။ ရှိပြီးသား ဘာသာပြန်ကို စစ်ဆေးခြင်း ၅ မျက်နှာအထိ ฿500၊ ထို့နောက် တစ်မျက်နှာလျှင် ฿150။ တံဆိပ် တစ်မျက်နှာလျှင် ฿100။ စကားပြန်ကို စာဖြင့် စျေးနှုန်းပေးပါသည်။"),
         ],
         "foot_tag": "ထိုင်းနိုင်ငံတွင် မှတ်ပုံတင်ထားသော ကုမ္ပဏီ။ ချင်းမိုင်။",
         "foot": ["ထိုင်းဝန်ဆောင်မှု", "ရွှေ့ပြောင်းအလုပ်သမား", "ဘာသာပြန်", "အမေရိကန်ဗီဇာ", "အခမဲ့အက်ပ်", "မိတ်ဖက်", "လိုင်စင်"],
         "locale": "my_MM",
     },
+}
+
+
+PRICE_H = {"en": "Prices", "th": "ราคา", "my": "စျေးနှုန်း"}
+PRICES = {
+    "en": [("New translation", "฿1,500", "Up to 5 pages; ฿500 a page after that."),
+           ("Checking an existing translation", "฿500", "Up to 5 pages; ฿150 a page after that."),
+           ("Stamp", "฿100", "A page."),
+           ("Interpreting", "Quote", "In writing, by the hour and the place.")],
+    "th": [("แปลใหม่", "฿1,500", "ไม่เกิน 5 หน้า หน้าต่อไปหน้าละ ฿500"),
+           ("ตรวจงานแปลที่มีอยู่", "฿500", "ไม่เกิน 5 หน้า หน้าต่อไปหน้าละ ฿150"),
+           ("ตราประทับ", "฿100", "ต่อหน้า"),
+           ("ล่าม", "ใบเสนอราคา", "เป็นลายลักษณ์อักษร ตามชั่วโมงและสถานที่")],
+    "my": [("ဘာသာပြန်အသစ်", "฿1,500", "၅ မျက်နှာအထိ၊ ထို့နောက် တစ်မျက်နှာလျှင် ฿500။"),
+           ("ရှိပြီးသား ဘာသာပြန်ကို စစ်ဆေးခြင်း", "฿500", "၅ မျက်နှာအထိ၊ ထို့နောက် တစ်မျက်နှာလျှင် ฿150။"),
+           ("တံဆိပ်", "฿100", "တစ်မျက်နှာလျှင်။"),
+           ("စကားပြန်", "စျေးနှုန်း", "နာရီနှင့် နေရာအလိုက် စာဖြင့်။")],
 }
 
 LANG_LINKS = [("en", "English"), ("th", "ภาษาไทย"), ("my", "မြန်မာ")]
@@ -202,6 +219,7 @@ def page(lang):
             + "".join(f'\n      <a href="{up}{PATHS[k]}" hreflang="{k}">{nm}</a>' for k, nm in LANG_LINKS if k != lang)
             + '\n      <a href="https://motdang.net/cm/p/chiang-mai-visa-desk-cmcuratedchiangmaivisadesk.html">Mot Dang</a>')
     cards = "".join(f'\n      <article class="card rise">\n        <h3>{e(h)}</h3>\n        <p>{e(p)}</p>\n      </article>' for h, p in t["papers"])
+    prices = "".join(f'\n      <li class="visa"><span class="code">{e(b)}</span><span class="body"><strong>{e(a)}</strong><span class="blurb">{e(c)}</span></span></li>' for a, b, c in PRICES[lang])
     steps = "".join(f'\n      <div class="step rise">\n        <h3>{e(h)}</h3>\n        <p>{e(p)}</p>\n      </div>' for h, p in t["how"])
     opts = lambda xs: "".join(f"\n            <option>{e(x)}</option>" for x in xs)
     faq = "".join(f"\n      <details><summary>{e(q)}</summary>\n        <p>{e(a)}</p></details>" for q, a in t["faq"])
@@ -291,6 +309,16 @@ def page(lang):
       <h2>{e(t["talk_h"])}</h2>
       <p>{e(t["talk"])}</p>
     </div>
+  </div>
+</section>
+
+<section id="prices">
+  <div class="wrap">
+    <div class="section-head rise">
+      <h2>{e(PRICE_H[lang])}</h2>
+    </div>
+    <ul class="visas">{prices}
+    </ul>
   </div>
 </section>
 
