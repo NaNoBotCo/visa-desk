@@ -32,13 +32,15 @@ VOCAB_HOSTS = {
 PAGES = ["index.html", "us-visas/index.html", "farang-buddy/index.html", "partners/index.html",
          "white-label/index.html", "migrant-workers/index.html",
          "th/index.html", "th/migrant-workers/index.html", "shn/migrant-workers/index.html", "th/us-visas/index.html", "th/farang-buddy/index.html",
-         "th/partners/index.html", "th/white-label/index.html"]
+         "th/partners/index.html", "th/white-label/index.html",
+         "translation/index.html", "th/translation/index.html", "my/translation/index.html"]
 PAIRS = [("index.html", "th/index.html"),
          ("us-visas/index.html", "th/us-visas/index.html"),
          ("farang-buddy/index.html", "th/farang-buddy/index.html"),
          ("partners/index.html", "th/partners/index.html"),
          ("white-label/index.html", "th/white-label/index.html"),
-         ("migrant-workers/index.html", "th/migrant-workers/index.html")]
+         ("migrant-workers/index.html", "th/migrant-workers/index.html"),
+         ("translation/index.html", "th/translation/index.html")]
 REQUIRED = ["robots.txt", "sitemap.xml", "llms.txt", "assets/style.css",
             "assets/app.js", "assets/config.js", "assets/share.png", "assets/mark.svg",
             "assets/farang-buddy-qr.png",
