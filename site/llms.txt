@@ -30,6 +30,8 @@
   airport desk.
 - **Documents** — bank letters, lease copies, translation, certification,
   embassy paperwork.
+- **Translation** — Thai, English and Burmese, for visa, work-permit and
+  migrant-worker files; an interpreter at Immigration and the employment office.
 - **Workers from Myanmar, Laos, Cambodia and Vietnam** — MOU recruitment
   (quota, contract, arrival filings), work permits, renewals on the Department
   of Employment's e-WorkPermit system, change of employer, social security or
@@ -130,6 +132,7 @@ root; Thai is under /th/. The migrant-workers page is also in Shan, under /shn/.
 ## Pages
 
 - [Home](https://chiangmaivisadesk.com/): services, how it works, questions, quote form
+- [Translation](https://chiangmaivisadesk.com/translation/): Thai, English and Burmese translation for visa, work-permit and migrant-worker files, and an interpreter at Immigration and the employment office ([ไทย](https://chiangmaivisadesk.com/th/translation/), [မြန်မာ](https://chiangmaivisadesk.com/my/translation/))
 - [Migrant workers](https://chiangmaivisadesk.com/migrant-workers/): workers from Myanmar, Laos, Cambodia and Vietnam, and their employers
 - [แรงงานต่างด้าว](https://chiangmaivisadesk.com/th/migrant-workers/): the same page in Thai
 - [ၵူၼ်းႁဵတ်းၵၢၼ်](https://chiangmaivisadesk.com/shn/migrant-workers/): the same page in Shan

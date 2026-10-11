@@ -39,6 +39,14 @@
       onLine: "LINE", onWhats: "WhatsApp", onFb: "Facebook", onTg: "Telegram",
       onX: "X", onMail: "Email", scan: "ဢမ်ႇၼၼ် scan ဢၼ်ၼႆႉ",
       shareText: "ၽိုၼ်ႁဵတ်းၵၢၼ် ၵူၼ်းႁဵတ်းၵၢၼ် Chiang Mai"
+    },
+    my: {
+      lineAsk: "LINE တွင် မေးရန်", lineAdd: "LINE တွင် ထည့်ရန်", lineId: "LINE",
+      lineBlurb: "ဒက်စ်ကို LINE တွင် ထည့်ပြီး ရက်စွဲများ ပို့ပါက စျေးနှုန်း အမြန်ဆုံး ရပါသည်။",
+      shareTitle: "မျှဝေရန်", share: "မျှဝေရန်", copy: "လင့်ခ် ကူးရန်", copied: "ကူးပြီး",
+      onLine: "LINE", onWhats: "WhatsApp", onFb: "Facebook", onTg: "Telegram",
+      onX: "X", onMail: "အီးမေးလ်", scan: "သို့မဟုတ် ဤကုဒ်ကို စကင်ဖတ်ပါ",
+      shareText: "ချင်းမိုင်ရှိ ဘာသာပြန်နှင့် ဗီဇာ ဝန်ဆောင်မှု"
     }
   };
   var T = LABELS[LANG] || LABELS.en;

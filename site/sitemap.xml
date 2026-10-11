@@ -80,4 +80,28 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/migrant-workers/"/>
     <changefreq>weekly</changefreq><priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/translation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiangmaivisadesk.com/translation/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://chiangmaivisadesk.com/th/translation/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://chiangmaivisadesk.com/my/translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/translation/"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/th/translation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiangmaivisadesk.com/translation/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://chiangmaivisadesk.com/th/translation/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://chiangmaivisadesk.com/my/translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/translation/"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chiangmaivisadesk.com/my/translation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chiangmaivisadesk.com/translation/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://chiangmaivisadesk.com/th/translation/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://chiangmaivisadesk.com/my/translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chiangmaivisadesk.com/translation/"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
 </urlset>
