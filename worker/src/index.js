@@ -1,3 +1,4 @@
+import { handle as payVerify } from "./pay/verify.js";
 /**
  * Quote + partner intake for the site.
  *
@@ -45,7 +46,7 @@ function allowed(request, env) {
 
 const CORS = (origin) => ({
   "Access-Control-Allow-Origin": origin,
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type, Idempotency-Key",
   "Access-Control-Max-Age": "86400"
 });
@@ -57,12 +58,22 @@ const FIELDS = ["name", "contact", "visa", "need", "date", "where", "who", "note
 const LINES = ["th", "us", "wl"];
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const origin = allowed(request, env);
 
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS(origin) });
     if (url.pathname === "/health") return json({ ok: true }, 200, origin);
+    // The translation payment box (nanobotco-pay, Nan 2026-10-12): GET says whether the
+    // slip check is on, POST takes the slip. Same CORS allowance as the quote form.
+    if (url.pathname === "/pay/verify") {
+      const r = await payVerify(request, env, { prices: { new: [1500, 5, 500], check: [500, 5, 150], stamp: 100 },
+        refPrefix: "CMVD", site: "chiangmaivisadesk.com" }, { waitUntil: ctx && ctx.waitUntil ? (p) => ctx.waitUntil(p) : null });
+      const h = new Headers(r.headers);
+      for (const [k, v] of Object.entries(CORS(origin))) h.set(k, v);
+      h.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+      return new Response(r.body, { status: r.status, headers: h });
+    }
     if (url.pathname !== "/quote" || request.method !== "POST") return json({ error: "not found" }, 404, origin);
 
     let body;
