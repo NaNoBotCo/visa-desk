@@ -186,7 +186,7 @@ wrangler deploy
 | `make codes` | partner code menu |
 | `make ledger` | commission statement for a period |
 | `make licence` | mint a licence for a white-label copy |
-| `make deploy` | Cloudflare Pages |
+| `make deploy` | publish the site Worker (a merge to `main` does this from motdang-server) |
 
 ## Colour, and proving it
 
